@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
+/* Variables */
+:root {
+  /* Colors */
+  /* Primary Colors */
+  --landing-page-bg: linear-gradient(122.21deg, #35693E -4.31%, #CFF9D7 99.36%);
+  --login-btn-green: hsla(104, 32%, 56%, 1);
+  --dark-green: hsla(131, 76%, 15%, 1);
+  --red: hsla(0, 99%, 61%, 1);
+  --signUp-bg: hsla(131, 33%, 31%, 1);
+  --form-bg: hsla(104, 32%, 56%, 0.77);
+  --login-bg: hsla(129, 24%, 22%, 1);
+  --navbar-bg-green: hsla(131, 35%, 24%, 1);
+  --h3-color: hsla(104, 29%, 43%, 1);
+  
+  /* Neutral Colors */
+  --white: hsla(0, 0%, 100%, 1);
+  --black: hsla(0, 0%, 0%, 1);
+  --light-ash: hsla(0, 0%, 73%, 1);
+  --otp-input-bg: hsla(0, 0%, 74%, 1);
+  --next-btn-bg: hsla(0, 0%, 42%, 1);
+  --placeholder-color: hsla(0, 0%, 62%, 1);
+  --h2-color: hsla(0, 1%, 61%, 1);
+}
+
 body {
   font-family: 'Poppins',san-serif; 
 }
