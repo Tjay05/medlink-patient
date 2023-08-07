@@ -1,7 +1,9 @@
 import LandingPage from "./pages/LandingPage"
 import SignUp from "./pages/signup-login/SignUp"
-import SucessSignup from "./pages/signup-login/SuccessSignUp"
 import Verification from "./pages/signup-login/Verification"
+import SucessSignup from "./pages/signup-login/SuccessSignUp"
+import Login from "./pages/signup-login/Login"
+import ChangePword from "./pages/signup-login/ChangePword"
 
 function App() {
   return (
@@ -9,7 +11,9 @@ function App() {
       {/* <LandingPage/> */}
       {/* <SignUp/> */}
       {/* <Verification/> */}
-      <SucessSignup/>
+      {/* <SucessSignup/> */}
+      {/* <Login/> */}
+      <ChangePword/>
     </>
   )
 }

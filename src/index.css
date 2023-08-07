@@ -45,6 +45,15 @@ h1 {
   margin-block: 1rem 2rem;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul{
+  list-style: none;
+}
+
 button {
   cursor: pointer;
 }
@@ -409,6 +418,92 @@ form.verify button {
   align-self: flex-end;
 }
 
+/* Login PAge */
+.loginPage {
+  background: var(--login-bg);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+}
+
+.loginPage header {
+  margin-block: 1.7rem;
+}
+
+.loginPage header nav p {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.loginPage header nav p span.white-line {
+  border-top: 3px solid var(--white);
+}
+
+.loginPage header nav p span.red-line {
+  border-bottom: 3px solid var(--red);
+}
+
+/* Login Main */
+.loginPage main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginPage main .form-field {
+  background-color: var(--form-bg);
+  padding: 2.7rem; 
+  border-radius: 30px;
+  width: 100%;
+  max-width: 430px;
+  min-height: 350px;
+  margin-block: .8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.loginPage .form-field form {
+  color: var(--white);
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  margin-inline: auto;
+  width: 100%;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.loginPage main .form-field p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  align-self: flex-end;
+  color: var(--red);
+  font-size: 12px;
+}
+
+.loginPage .form-field form input {
+  width: 100%;
+  height: 37px;
+  margin-block: 0.4rem 1.3rem;
+  border: none;
+  border-radius: 5px;
+  padding-inline-start: 1rem;
+  font-size: 0.9rem;
+}
+
+.loginPage main button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  background: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: .3rem 1rem;
+  color: var(--login-btn-green);
+  margin-block-start: .5rem;
+  align-self: flex-end;
+}
+
 /* Desktop Styles */
 @media(min-width: 860px) {
   /* Utility Style */
@@ -566,5 +661,10 @@ form.verify button {
 
   .successSignupPage main p.reminder {
     font-size: 1.4rem;
+  }
+
+  /* Login Page */
+  .loginPage main h1 {
+    font-size: 3.7rem;
   }
 }
