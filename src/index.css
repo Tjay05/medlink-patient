@@ -37,8 +37,12 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 /* Base Styles */
-body {
-  /* font-family: 'Poppins',sans-serif;  */
+h1 {
+   text-align: center;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 2.8rem;
+  margin-block: 1rem 2rem;
 }
 
 button {
@@ -208,15 +212,7 @@ main section.aboutUs aside img {
 /* SignUp Main */
 .signUpPage main {
   margin-block: 2rem;
-}
-
-.signUpPage main h1 {
-  text-align: center;
-  color: var(--white);
-  font-weight: 600;
-  font-size: 2.8rem;
-  margin-block: 1rem 2rem;
-}
+} 
 
 .signUpPage main form {
   display: flex;
@@ -230,8 +226,7 @@ main section.aboutUs aside img {
   gap: 1rem;
 }
 
-.signUpPage main form input {
-  /* color: var(--placeholder-color); */
+.signUpPage main form input { 
   font-family: 'Poppins', sans-serif;
   border-radius: 5px;
   font-size: 0.9rem;
@@ -265,6 +260,89 @@ form input.confirm-password {
   color: var(--login-btn-green);
   margin-block: 2rem 4rem;
   align-self: flex-end;
+}
+
+/* Verififcation Page */
+.verificationPage {
+  background: var(--signUp-bg);
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  height: 100vh;
+}
+
+.verificationPage header {
+  margin-block: 2rem;
+}
+
+.verificationPage header nav p {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.verificationPage header nav p span.white-line {
+  border-top: 3px solid var(--white);
+}
+
+.verificationPage header nav p span.red-line {
+  border-bottom: 3px solid var(--red);
+}
+
+/* Verification PAge Main */
+.verificationPage main {
+  margin-block: 2rem;
+}
+
+.verificationPage main h1 {
+  font-size: 2.5rem;
+}
+
+.verificationPage main p {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.06rem;
+}
+
+.verificationPage main p span.OTP {
+  color: var(--red);
+}
+
+.verificationPage main form.verify {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.verificationPage main form.verify .otp {
+  display: flex;
+  width: 100%;
+  max-width: 350px;
+  gap: 1rem;
+}
+
+form.verify .otp input {
+  margin-inline: auto;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  margin-block: 4rem;
+  background: var(--otp-input-bg);
+  font-size: 3rem;
+  border: none;
+  border-radius: 50%;
+}
+
+form.verify button {
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 1rem;
+  color: var(--white);
+  background: var(--next-btn-bg);
 }
 
 /* Desktop Styles */
@@ -355,8 +433,8 @@ form input.confirm-password {
   }
 
   .signUpPage main h1 { 
-    font-size: 4rem; 
-    margin-block-end: 3.5rem;
+    font-size: 4rem !important; 
+    margin-block-end: 3.5rem !important;
   }
 
   .signUpPage main form {
@@ -386,5 +464,23 @@ form input.confirm-password {
     font-size: 1.7rem;  
     margin-block: 3rem 3.5rem;
     align-self: flex-end;
+  }
+
+  /* Verification PAge */
+  .verificationPage main {
+    max-width: 920px;
+    margin-inline: auto;
+  }
+
+  .verificationPage main h1 {
+    font-size: 4rem;
+  }
+
+  .verificationPage main p {
+    font-size: 2.2rem;
+  }
+
+  .verificationPage main form.verify button {
+    width: 30%;
   }
 }
