@@ -4,16 +4,20 @@ import Verification from "./pages/signup-login/Verification"
 import SucessSignup from "./pages/signup-login/SuccessSignUp"
 import Login from "./pages/signup-login/Login"
 import ChangePword from "./pages/signup-login/ChangePword"
+import PwordVerification from "./pages/signup-login/PwordVerification"
+import NewPword from "./pages/signup-login/NewPword"
 
 function App() {
   return (
     <>
-      {/* <LandingPage/> */}
+      <LandingPage/>
       {/* <SignUp/> */}
       {/* <Verification/> */}
       {/* <SucessSignup/> */}
       {/* <Login/> */}
-      <ChangePword/>
+      {/* <ChangePword/> */}
+      {/* <PwordVerification/> */}
+      {/* <NewPword/> */}
     </>
   )
 }

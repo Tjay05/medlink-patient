@@ -419,7 +419,7 @@ form.verify button {
 }
 
 /* Login PAge */
-.loginPage {
+.loginPage, .changePword {
   background: var(--login-bg);
   font-family: 'Poppins', sans-serif;
   height: 100vh;

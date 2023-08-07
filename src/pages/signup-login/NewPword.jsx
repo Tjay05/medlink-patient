@@ -1,4 +1,4 @@
-const ChangePword = () => {
+const NewPword = () => {
   return ( 
     <div className="container changePword loginPage">
       <header>
@@ -10,27 +10,27 @@ const ChangePword = () => {
         <h1>Change Password</h1>
         <div className="form-field">
           <form>
-            <label htmlFor="PatientId">Enter your Patient ID</label>
+            <label htmlFor="password">Enter New Password</label>
             <br />
             <input 
-              type="text"
-              id="PatientId"
-              placeholder="Patient ID"
+              type="password"
+              id="password"
+              placeholder="New Password"
             />
             <br />
-            <label htmlFor="Email">Enter your Email Address</label>
+            <label htmlFor="newPassword">Confirm Password</label>
             <br />
             <input 
-              type="email"
-              id="Email"
-              placeholder="Email Address" 
+              type="password"
+              id="newPassword"
+              placeholder="Confirm Password" 
             />
           </form> 
         </div>
-        <button>Recover</button>
+        <button>Done</button>
       </main>
     </div>
   );
 }
  
-export default ChangePword;
+export default NewPword;
