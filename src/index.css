@@ -24,6 +24,147 @@
   --h2-color: hsla(0, 1%, 61%, 1);
 }
 
-body {
-  font-family: 'Poppins',san-serif; 
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Styles */
+body {
+  /* font-family: 'Poppins',sans-serif;  */
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Utility Styles */
+.container {
+  width: 100%;
+  padding-inline: .8rem; 
+  padding-block: 1rem;
+}
+
+/* Mobile Styles */
+/* Landing Page */
+.landPage {
+  background: var(--landing-page-bg);
+}
+
+/* Header */
+.landPage header nav {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-block: 1rem;
+}
+
+.landPage header nav p {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.landPage header nav p span.white-line {
+  border-top: 3px solid var(--white);
+}
+
+.landPage header nav p span.red-line {
+  border-bottom: 3px solid var(--red);
+}
+
+.landPage header nav button { 
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: .3rem .9rem;
+  color: var(--login-btn-green);
+}
+
+/* Landing PAge Main */
+main section.moto {
+  margin-block: 2rem;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+} 
+
+section.moto .priority {
+  position: relative;
+  width: 28%;
+}
+
+section.moto .priority p {
+  color: var(--white);
+  font-weight: 400;
+  width: 100%;
+  font-size: 2.3rem;
+  line-height: 48px;
+} 
+
+.priority img {
+  position: absolute;
+  top: 75px;
+  left: -34%;
+  height: 35px;
+}
+
+.priority button {
+  display: none;
+}
+
+section.moto img {
+  width: 70%;
+}
+
+main button.login2 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: .3rem 1.5rem;
+  color: var(--login-btn-green);
+  margin-block: 1rem;
+}
+
+main section.aboutUs {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 4.5rem;
+}
+
+main section.aboutUs aside {
+  display: flex;
+  align-items: center;
+  font-size: .8rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  color: var(--dark-green);
+}
+
+main section.aboutUs aside img {
+  width: 25%;
+}
+
+/* Desktop Styles */
