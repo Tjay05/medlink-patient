@@ -1,4 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
+
 const SignUp = () => {
+  const history = useNavigate();
+
+  const handleSubmit = () => {
+    history('/Verification')
+  }
+
   return ( 
     <div className="container signUpPage">
       <header>
@@ -53,7 +62,7 @@ const SignUp = () => {
             className="confirm-password"
             placeholder="Confirm Password" 
           />
-          <button>Register</button>
+          <button onClick={handleSubmit} >Register</button>
         </form>
       </main>
     </div> 

@@ -1,4 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 const ChangePword = () => {
+  const history = useNavigate();
+
+  const handleClick = () => {
+    history('/PasswordVerification')
+  }
+
   return ( 
     <div className="container changePword loginPage">
       <header>
@@ -27,7 +35,7 @@ const ChangePword = () => {
             />
           </form> 
         </div>
-        <button>Recover</button>
+        <button onClick={handleClick} >Recover</button>
       </main>
     </div>
   );

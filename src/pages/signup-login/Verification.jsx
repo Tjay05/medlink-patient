@@ -1,4 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 const Verification = () => {
+  const history = useNavigate()
+
+  const handleClick = () => {
+    history('/SuccessfulSignedUp')
+  }
+
   return ( 
     <div className="container verificationPage">
       <header>
@@ -16,7 +24,7 @@ const Verification = () => {
             <input type="text" id="" />
             <input type="text" id="" />
           </div>
-          <button>Next</button>
+          <button onClick={handleClick} >Next</button>
         </form>
       </main>
     </div> 
