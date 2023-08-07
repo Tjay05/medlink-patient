@@ -1,5 +1,6 @@
 import LandingPage from "./pages/LandingPage"
 import SignUp from "./pages/signup-login/SignUp"
+import SucessSignup from "./pages/signup-login/SuccessSignUp"
 import Verification from "./pages/signup-login/Verification"
 
 function App() {
@@ -7,7 +8,8 @@ function App() {
     <>
       {/* <LandingPage/> */}
       {/* <SignUp/> */}
-      <Verification/>
+      {/* <Verification/> */}
+      <SucessSignup/>
     </>
   )
 }

@@ -345,6 +345,70 @@ form.verify button {
   background: var(--next-btn-bg);
 }
 
+/* Successful signup Page */
+.successSignupPage {
+  background: var(--signUp-bg);
+  height: 100vh;
+  font-family: 'Poppins',sans-serif;
+}
+
+/* Header */
+.successSignupPage header {
+  margin-block: 2rem;
+}
+
+.successSignupPage header nav p {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.successSignupPage header nav p span.white-line {
+  border-top: 3px solid var(--white);
+}
+
+.successSignupPage header nav p span.red-line {
+  border-bottom: 3px solid var(--red);
+}
+
+.successSignupPage main {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: var(--white);
+}
+
+.successSignupPage p.registeredSuccess {
+  font-size: 1.2rem;
+  line-height: 30px;
+  font-weight: 700;
+  margin-block-end: 2rem;
+}
+
+.successSignupPage p.registeredSuccess span.patientId {
+  color: var(--black);
+}
+
+.successSignupPage p.reminder {
+  font-size: 1.08rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: var(--light-ash);
+}
+
+.successSignupPage main button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  background: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: .3rem 1rem;
+  color: var(--login-btn-green);
+  margin-block: 4rem;
+  align-self: flex-end;
+}
+
 /* Desktop Styles */
 @media(min-width: 860px) {
   /* Utility Style */
@@ -482,5 +546,25 @@ form.verify button {
 
   .verificationPage main form.verify button {
     width: 30%;
+  }
+
+  /* Successful signup Page */
+  .successSignupPage main {
+    max-width: 830px;
+    margin-inline: auto;
+    justify-content: space-between;
+  }
+
+  .successSignupPage main h1 {
+    font-size: 4rem;
+  }
+
+  .successSignupPage main p.registeredSuccess {
+    font-size: 2.5rem;
+    line-height: 60px;
+  }
+
+  .successSignupPage main p.reminder {
+    font-size: 1.4rem;
   }
 }
