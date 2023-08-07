@@ -2,6 +2,7 @@ import nurse from '../../src/assets/images/nurse.png';
 import trackRecord from '../../src/assets/icons/track-record.svg';
 import schedule from '../../src/assets/icons/schedule-pay.svg'
 import lines from '../../src/assets/icons/is.svg';
+import lines2 from '../../src/assets/icons/is-desktop.svg';
 
 const LandingPage = () => {
   return ( 
@@ -17,17 +18,18 @@ const LandingPage = () => {
           <div className="priority">
             <p>Your Health <span>Is</span> Our Top Priority</p>
             <img src={lines} alt="" />
+            <img className='line2' src={lines2} alt="" />
             <button className='login1'>Login</button>
           </div>
           <img src={nurse} alt="nurse" />
         </section>
         <button className='login2'>Login</button>
         <section className='aboutUs'>
-          <aside>
+          <aside className='aside1' >
             <img src={trackRecord} alt="Track Record" />
             <p>Keep track of your medical record</p>
           </aside>
-          <aside>
+          <aside className='aside2'>
             <img src={schedule} alt="Schedule and Pay" />
             <p>Schedule and pay for appointments online</p>
           </aside>

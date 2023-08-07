@@ -70,7 +70,7 @@ img {
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
-  margin-block: 1rem;
+  margin-block: 2rem;
 }
 
 .landPage header nav p {
@@ -88,11 +88,11 @@ img {
 
 .landPage header nav button { 
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   background: var(--white);
   border: none;
   border-radius: 5px;
-  padding: .3rem .9rem;
+  padding: .3rem 1rem;
   color: var(--login-btn-green);
 }
 
@@ -109,6 +109,10 @@ main section.moto {
 section.moto .priority {
   position: relative;
   width: 28%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 section.moto .priority p {
@@ -124,6 +128,10 @@ section.moto .priority p {
   top: 75px;
   left: -34%;
   height: 35px;
+}
+
+.priority img.line2 {
+  display: none;
 }
 
 .priority button {
@@ -168,3 +176,83 @@ main section.aboutUs aside img {
 }
 
 /* Desktop Styles */
+@media(min-width: 900px) {
+  /* Utility Style */
+  .container{
+    padding-inline: 4rem;
+  }
+
+  /* Landing Page Main */
+  main section.moto {
+    margin-block: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%; 
+  } 
+
+  section.moto .priority {
+    position: relative;
+    width: 60%;
+  }
+  
+  section.moto .priority p {
+    color: var(--white);
+    font-weight: 400;
+    width: 77%;
+    font-size: 4.3rem;
+    line-height: 108px;
+  } 
+  
+  .priority img {
+    display: none;
+  }
+  
+  .priority img.line2 { 
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 250px;
+    height: 35px;
+  }
+  
+  .priority button {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 2rem;
+    background: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: .3rem 1.9rem;
+    color: var(--login-btn-green);
+    margin-block: 5rem 1rem;
+  }
+  
+  section.moto img {
+    width: max(30%, 370px);
+  }
+
+  button.login2 {
+    display: none;
+  }
+
+  main section.aboutUs aside {
+    display: flex;
+    gap: 1rem; 
+  }
+
+  section.aboutUs aside.aside1 {
+    color: var(--white);
+    opacity: .5;
+  }
+  
+  section.aboutUs aside p {
+    align-items: center; 
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  
+  main section.aboutUs aside img {
+    width: 25%;
+  }
+}
