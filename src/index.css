@@ -45,6 +45,11 @@ button {
   cursor: pointer;
 }
 
+input:focus {
+  border: none;
+  outline: none;
+}
+
 img {
   display: inline-block;
   max-width: 100%;
@@ -175,8 +180,95 @@ main section.aboutUs aside img {
   width: 25%;
 }
 
+/* SignUp Page */
+/* Header */
+.signUpPage {
+  background: var(--signUp-bg);
+  font-family: 'Poppins', sans-serif;
+}
+
+.signUpPage header {
+  margin-block: 2rem;
+}
+
+.signUpPage header nav p {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.signUpPage header nav p span.white-line {
+  border-top: 3px solid var(--white);
+}
+
+.signUpPage header nav p span.red-line {
+  border-bottom: 3px solid var(--red);
+}
+
+/* SignUp Main */
+.signUpPage main {
+  margin-block: 2rem;
+}
+
+.signUpPage main h1 {
+  text-align: center;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 2.8rem;
+  margin-block: 1rem 2rem;
+}
+
+.signUpPage main form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signUpPage main form .signupForm {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.signUpPage main form input {
+  /* color: var(--placeholder-color); */
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  border: none;
+  padding-inline-start: .5rem;
+  padding-inline-end: .1rem;
+  height: 40px;
+  margin-bottom: 2rem;
+  width: 100%;
+} 
+
+.signupForm select {
+  border-radius: 5px;
+  padding-inline-start: .5rem;
+  height: 40px;
+  width: 100%;
+  font-size: .9rem;
+}
+
+form input.confirm-password {
+  margin-block: 2rem 3rem;
+}
+
+.signUpPage main form button {
+  font-weight: 600;
+  font-size: 1.5rem;
+  background: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: .3rem 1.5rem;
+  color: var(--login-btn-green);
+  margin-block: 2rem 4rem;
+  align-self: flex-end;
+}
+
 /* Desktop Styles */
-@media(min-width: 900px) {
+@media(min-width: 860px) {
   /* Utility Style */
   .container{
     padding-inline: 4rem;
@@ -254,5 +346,45 @@ main section.aboutUs aside img {
   
   main section.aboutUs aside img {
     width: 25%;
+  }
+
+  /* SignUp Page */
+  .signUpPage main {
+    max-width: 990px;
+    margin-inline: auto;
+  }
+
+  .signUpPage main h1 { 
+    font-size: 4rem; 
+    margin-block-end: 3.5rem;
+  }
+
+  .signUpPage main form {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .signUpPage main form .signupForm {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 4rem;
+  } 
+
+  .signupForm select {
+    border-radius: 5px;
+    padding-inline: 1rem; 
+  }
+
+  form input.confirm-password {
+    margin-block: 1.5rem 3rem;
+    width: 45% !important;
+    align-self: flex-end;
+  }
+
+  .signUpPage main form button { 
+    font-size: 1.7rem;  
+    margin-block: 3rem 3.5rem;
+    align-self: flex-end;
   }
 }
