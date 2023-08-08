@@ -38,11 +38,11 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 
 /* Base Styles */
 h1 {
-   text-align: center;
+  text-align: center;
   color: var(--white);
   font-weight: 600;
-  font-size: 2.8rem;
-  margin-block: 1rem 2rem;
+  font-size: 2.15rem;
+  margin-block: 1rem;
 }
 
 a {
@@ -223,6 +223,10 @@ main section.aboutUs aside img {
   margin-block: 2rem;
 } 
 
+.signUpPage main h1 {
+  font-size: 2.3rem;
+}
+
 .signUpPage main form {
   display: flex;
   flex-direction: column;
@@ -303,7 +307,7 @@ form input.confirm-password {
 }
 
 .verificationPage main h1 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
 }
 
 .verificationPage main p {
@@ -335,7 +339,7 @@ form.verify .otp input {
   width: 70px;
   height: 70px;
   text-align: center;
-  margin-block: 4rem;
+  margin-block: 2rem;
   background: var(--otp-input-bg);
   font-size: 3rem;
   border: none;
@@ -388,7 +392,7 @@ form.verify button {
 }
 
 .successSignupPage p.registeredSuccess {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 30px;
   font-weight: 700;
   margin-block-end: 2rem;
@@ -408,7 +412,7 @@ form.verify button {
 .successSignupPage main button {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background: var(--white);
   border: none;
   border-radius: 5px;
@@ -426,7 +430,7 @@ form.verify button {
 }
 
 .loginPage header {
-  margin-block: 1.7rem;
+  margin-block: 1.5rem;
 }
 
 .loginPage header nav p {
@@ -453,12 +457,12 @@ form.verify button {
 
 .loginPage main .form-field {
   background-color: var(--form-bg);
-  padding: 2.7rem; 
+  padding: 2.5rem; 
   border-radius: 30px;
   width: 100%;
   max-width: 430px;
-  min-height: 350px;
-  margin-block: .8rem;
+  min-height: 100px;
+  margin-block: 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -494,7 +498,7 @@ form.verify button {
 .loginPage main button {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background: var(--white);
   border: none;
   border-radius: 5px;

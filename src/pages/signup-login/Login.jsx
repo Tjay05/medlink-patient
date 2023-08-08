@@ -22,14 +22,6 @@ const Login = () => {
               placeholder="Patient ID"
             />
             <br />
-            <label htmlFor="Email">Enter your Email Address</label>
-            <br />
-            <input 
-              type="email"
-              id="Email"
-              placeholder="Email Address" 
-            />
-            <br />
             <label htmlFor="Password">Enter your Password</label>
             <br />
             <input 
