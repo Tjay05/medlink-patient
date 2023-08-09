@@ -13,6 +13,8 @@
   --login-bg: hsla(129, 24%, 22%, 1);
   --navbar-bg-green: hsla(131, 35%, 24%, 1);
   --h3-color: hsla(104, 29%, 43%, 1);
+  --welcome-gradient: linear-gradient(90deg, #17320dcc 0%, #a7ff86cc 98.63%);
+  ; 
   
   /* Neutral Colors */
   --white: hsla(0, 0%, 100%, 1);
@@ -523,6 +525,10 @@ form.verify button {
 /* Navbar */
 header.patientHeader {
   background: var(--login-bg);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 } 
 
 header.patientHeader nav.header {
@@ -574,9 +580,11 @@ a.initials {
   display: flex;
   align-items: center;
   width: 100%; 
+  position: fixed;
   padding-block: .7rem;
   max-height: 42px;
   background: var(--white);
+  z-index: 90;
 }
 
 .headerFooter p.header {
@@ -591,6 +599,7 @@ li.hamburger {
   width: 100%;
   flex-direction: column; 
   align-items: flex-end;
+  margin-inline-end: 1rem;
   z-index: 999;
 }
 li.hamburger .hamburger-icon {  
@@ -635,10 +644,10 @@ aside nav.secondNav {
   width: 50%;
   height: 100vh;
   position: fixed;
-  /* top: 0; */
+  top: 92px;
   right: -100%;
   transition: right 0.4s ease-in-out;
-  z-index: 1;
+  z-index: 990;
 }
 
 aside nav.secondNav.open {
@@ -707,6 +716,100 @@ aside nav.secondNav.open ul li:nth-child(4) {
 
 aside nav.secondNav ul li img {
   width: 12%; 
+}
+
+/* Dashboard Main */
+main.header {
+  background: var(--white);
+  border-radius: 10px;
+  margin-block: 4.5rem 2.5rem;
+}
+
+main.header .wrapper {
+  width: 95%;
+  margin-inline: auto;
+  padding-block: 1rem;
+}
+
+.doctor-dashboard .welcome::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--welcome-gradient);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.grid-container .welcome {
+  position: relative; 
+  background-image: url(./assets/images/scope.jpeg);
+  background-position: 50% 50%;
+  background-size: cover;
+  grid-column: span 3;
+  grid-row: span 2;
+  border-radius: 10px;
+  padding: 0rem 1.3rem;
+}
+
+.doctor-dashboard .welcomeWrap {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+  padding-block: .8rem;
+}
+
+.welcome .text-wrapper {
+  font-size: .9rem;
+  margin-block-end: .3rem;
+}
+
+.welcome p.userName {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.welcome .welcome-line {
+  margin-block: .8rem;
+  width: 70%;
+  border-top: 1px solid white;
+}
+
+.welcome p.tip {
+  font-weight: 500;
+  font-size: .8rem;
+}
+
+/* CTA Section */
+section.cta {
+  display: flex;
+  border: 1px solid var(--form-bg);
+  border-radius: 10px;
+  width: 100%;
+  margin-block: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  height: 104px;
+}
+
+section.cta .dividerLine {
+  border-left: 1px solid var(--black);
+  height: 100%;
+}
+
+section.cta .appToday {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+section.cta .appToday img {
+  width: 30%;
 }
 
 /* Desktop Styles */

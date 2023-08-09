@@ -14,6 +14,7 @@ import ChangePword from "./pages/signup-login/ChangePword"
 import PwordVerification from "./pages/signup-login/PwordVerification"
 import NewPword from "./pages/signup-login/NewPword"
 import NavBar from "./layout/Navbar";
+import Dashboard from "./pages/home/Dashboard";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,8 +27,9 @@ const router = createBrowserRouter(
       <Route path='ChangePassword' element={<ChangePword/>} />
       <Route path='PasswordVerification' element={<PwordVerification/>} />
       <Route path='NewPassword' element={<NewPword/>} />
-      <Route path='Home' element={<NavBar/>} />
-      {/* </Route> */}
+      <Route path='Home' element={<NavBar/>} >
+        <Route index element={<Dashboard/>} />
+      </Route>
     </Route>
   )
 )

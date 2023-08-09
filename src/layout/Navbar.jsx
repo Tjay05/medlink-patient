@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, Outlet } from 'react-router-dom';
 
 import logo from './../assets/icons/logo2.svg';
 import blocks from './../assets/icons/blocks.svg';
@@ -90,6 +90,9 @@ const NavBar = () => {
           </nav>
         </aside>
       )} 
+      <main className='header'>
+        <Outlet/>
+      </main>
     </>
   );
 }
