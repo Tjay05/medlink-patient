@@ -37,7 +37,7 @@ const NavBar = () => {
       <header className='patientHeader'>
         <nav className='header'>
           <ul className='leftNav'>
-            <li><img src={logo} alt="Logo" /></li>
+            <li><a><img src={logo} alt="Logo" /></a></li>
             <li className='noShow'><NavLink to='/home/'>Home</NavLink></li>
             <li className='noShow'><NavLink to='Appointments'>Appointments</NavLink></li>
             <li className='noShow'><NavLink to='Notifications'>Notifications</NavLink></li>

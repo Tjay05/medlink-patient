@@ -26,7 +26,8 @@ const router = createBrowserRouter(
       <Route path='ChangePassword' element={<ChangePword/>} />
       <Route path='PasswordVerification' element={<PwordVerification/>} />
       <Route path='NewPassword' element={<NewPword/>} />
-      <Route path='Home' element={<NavBar/>} ></Route>
+      <Route path='Home' element={<NavBar/>} />
+      {/* </Route> */}
     </Route>
   )
 )

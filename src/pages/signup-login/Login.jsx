@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const history = useNavigate();
 
+  const handleLogin = () => history('/Home/')
+
   return ( 
     <div className="container loginPage">
       <header>
@@ -32,7 +34,7 @@ const Login = () => {
           </form>
           <p><Link to="/ChangePassword">Forgot Password</Link></p>
         </div>
-        <button>Login</button>
+        <button onClick={handleLogin} >Login</button>
       </main>
     </div>
   );

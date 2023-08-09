@@ -544,7 +544,7 @@ header.patientHeader nav.header ul {
 
 nav.header ul.leftNav li.noShow {
   display: none;
-} 
+}
 
 header.patientHeader nav.header ul.rightNav li.last {
   display: flex;
@@ -580,7 +580,9 @@ a.initials {
 }
 
 .headerFooter p.header {
-  padding-inline: 2rem;
+  padding-inline: 5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #c9c9c9;
 }
 
 /* Hamburger Menu */ 
@@ -877,7 +879,45 @@ aside nav.secondNav ul li img {
   }
 
   /* DESKTOP NAVBAR */
+  header.patientHeader nav.header {
+    padding-block: 2rem;
+  }
+
   nav.header ul.leftNav li.noShow {
     display: inline-block;
   } 
+
+  header.patientHeader nav.header ul.rightNav li {
+    padding-inline: .3rem;
+  }
+
+  header.patientHeader nav.header ul.leftNav li a {
+    padding-inline: .8rem;
+  }
+
+  header.patientHeader nav.header ul.rightNav li.last {
+    display: flex;
+    gap: .9rem;
+    align-items: center;
+  }
+  
+  header.patientHeader nav.header ul.rightNav li.last .profile {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  ul.rightNav li.last .profile span {
+    opacity: .6;
+    font-weight: 300;
+  }
+
+  a.initials {
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.08);
+  }
 }
