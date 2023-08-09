@@ -22,6 +22,8 @@
   --next-btn-bg: hsla(0, 0%, 42%, 1);
   --placeholder-color: hsla(0, 0%, 62%, 1);
   --h2-color: hsla(0, 1%, 61%, 1);
+  --nav-font-color: hsla(115, 100%, 98%, 1);
+  --bg-grey-lite: hsla(0, 0%, 98%, 1); ;
 }
 
 /* Reset */
@@ -37,6 +39,10 @@ body, h1, h2, h3, h4, h5, h6, p, ul, li {
 }
 
 /* Base Styles */
+body {
+  background-color: var(--bg-grey-lite);
+}
+
 h1 {
   text-align: center;
   color: var(--white);
@@ -507,6 +513,188 @@ form.verify button {
   margin-block-start: .5rem;
   align-self: flex-end;
 }
+
+/* PATIENT HOME */
+/* Navbar */
+header.patientHeader {
+  background: var(--login-bg);
+} 
+
+header.patientHeader nav.header {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  align-items: center;
+  margin-inline: auto;
+  padding-block: .5rem;
+  max-height: 52px;
+  color: var(--white);
+  font-family: 'Poppins',sans-serif;
+  font-weight: 600;
+}
+
+header.patientHeader nav.header ul {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+nav.header ul.leftNav li.noShow {
+  display: none;
+} 
+
+header.patientHeader nav.header ul.rightNav li.last {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+header.patientHeader nav.header ul.rightNav li.last .profile {
+  font-size: 0.7rem;
+  text-align: right;
+}
+
+ul.rightNav li.last .profile span {
+  opacity: .6;
+  font-weight: 300;
+}
+
+a.initials {
+  padding: 0.2rem .65rem;
+  border-radius: 5px;
+  font-size: .87rem;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* CSS for Hamburger Menu Icon */ 
+.headerFooter {
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  padding-block: .7rem;
+  max-height: 42px;
+  background: var(--white);
+}
+
+li.hamburger {
+  display: flex;
+  width: 100%;
+  flex-direction: column; 
+  align-items: flex-end;
+  z-index: 999;
+}
+li.hamburger .hamburger-icon {  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 19px;
+  cursor: pointer;
+}
+
+li.hamburger::marker {
+  display: none;
+  color: white;
+  background: white;
+}
+
+li.hamburger .hamburger-icon span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background-color: var(--navbar-bg-green);
+  transition: transform 0.4s ease-in-out;
+}
+
+li.hamburger .hamburger-icon.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+li.hamburger .hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+li.hamburger .hamburger-icon.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* CSS for Off-canvas Sliding Navigation Menu */
+aside nav.secondNav {
+  background: hsla(131, 100%, 96%, 1);
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  /* top: 0; */
+  right: -100%;
+  transition: right 0.4s ease-in-out;
+  z-index: 1;
+}
+
+aside nav.secondNav.open {
+  right: 0;
+}
+
+aside nav.secondNav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column; 
+  height: 100%;
+}
+
+aside nav.secondNav ul li {
+  padding: 10px;
+  color: white;
+  font-size: 18px; 
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+aside nav.secondNav.open ul li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+aside nav.secondNav ul li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+aside nav.secondNav.open ul li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+aside nav.secondNav ul li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+aside nav.secondNav.open ul li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+aside nav.secondNav ul li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+aside nav.secondNav.open ul li:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+aside nav.secondNav ul li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+aside nav.secondNav.open ul li:nth-child(4) {
+  transition-delay: 0.5s;
+} 
+
+/* aside nav {
+  background: white;
+  width: 90%;
+  margin-inline: auto;
+} */
 
 /* Desktop Styles */
 @media(min-width: 860px) {
