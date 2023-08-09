@@ -81,6 +81,11 @@ img {
   padding-block: 1rem;
 }
 
+.header {
+  width: 90%;
+  margin-inline: auto;
+}
+
 /* Mobile Styles */
 /* Landing Page */
 .landPage {
@@ -462,15 +467,15 @@ form.verify button {
 }
 
 .loginPage main .form-field {
+  display: flex;
+  flex-direction: column;
   background-color: var(--form-bg);
   padding: 2.5rem; 
   border-radius: 30px;
   width: 100%;
-  max-width: 430px;
-  min-height: 100px;
+  max-width: 300px;
+  max-height: 310px;
   margin-block: 1rem 4rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .loginPage .form-field form {
@@ -523,9 +528,7 @@ header.patientHeader {
 header.patientHeader nav.header {
   display: flex;
   justify-content: space-between;
-  width: 90%;
   align-items: center;
-  margin-inline: auto;
   padding-block: .5rem;
   max-height: 52px;
   color: var(--white);
@@ -567,7 +570,6 @@ a.initials {
   background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* CSS for Hamburger Menu Icon */ 
 .headerFooter {
   display: flex;
   align-items: center;
@@ -577,6 +579,11 @@ a.initials {
   background: var(--white);
 }
 
+.headerFooter p.header {
+  padding-inline: 2rem;
+}
+
+/* Hamburger Menu */ 
 li.hamburger {
   display: flex;
   width: 100%;
@@ -637,6 +644,8 @@ aside nav.secondNav.open {
 }
 
 aside nav.secondNav ul {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
   padding: 0;
   list-style: none;
   display: flex;
@@ -645,11 +654,15 @@ aside nav.secondNav ul {
 }
 
 aside nav.secondNav ul li {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  background: white;
   padding: 10px;
-  color: white;
-  font-size: 18px; 
   opacity: 0;
   transform: translateX(-100%);
+  margin-block-end: 1rem;
+  color: var(--navbar-bg-green);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
@@ -690,14 +703,12 @@ aside nav.secondNav.open ul li:nth-child(4) {
   transition-delay: 0.5s;
 } 
 
-/* aside nav {
-  background: white;
-  width: 90%;
-  margin-inline: auto;
-} */
+aside nav.secondNav ul li img {
+  width: 12%; 
+}
 
 /* Desktop Styles */
-@media(min-width: 860px) {
+@media(min-width: 768px) {
   /* Utility Style */
   .container{
     padding-inline: 4rem;
@@ -857,6 +868,16 @@ aside nav.secondNav.open ul li:nth-child(4) {
 
   /* Login Page */
   .loginPage main h1 {
-    font-size: 3.7rem;
+    margin-block-end: 0rem;
+    font-size: 3.2rem;
   }
+
+  .loginPage main .form-field {
+    max-width: 400px;
+  }
+
+  /* DESKTOP NAVBAR */
+  nav.header ul.leftNav li.noShow {
+    display: inline-block;
+  } 
 }
