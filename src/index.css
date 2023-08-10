@@ -842,12 +842,55 @@ section.cta .appToday .appoint-details p.today {
 section.recentDoctors {
   margin-block: 2rem;
   font-family: 'Poppins', sans-serif;
+  color: var(--h2-color);
 }
 
 section.recentDoctors h2 {
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--h2-color);
+}
+
+section.recentDoctors .docsCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* place-items: center; */
+  margin-block: 1rem 2rem;
+  gap: 2rem;
+}
+
+section.recentDoctors .docsCard article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--h2-color);
+  border-radius: 5px;
+}
+
+section.recentDoctors .docsCard article .top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 1rem;
+  margin-block: 1rem 2rem;
+}
+
+section.recentDoctors .docsCard article .top img {
+  width: 50%;
+}
+
+section.recentDoctors .docsCard article .bottom {
+  border-top: 1px solid var(--h2-color);
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  justify-content: center;
+  width: 100%;
+  font-weight: 400;
+  padding-block: .5rem;
+  font-size: 0.65rem;
 }
 
 /* Desktop Styles */
