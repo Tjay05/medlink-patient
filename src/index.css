@@ -67,6 +67,10 @@ button {
   cursor: pointer;
 }
 
+abbr[title] {
+  text-decoration: none;
+}
+
 input:focus {
   border: none;
   outline: none;
@@ -795,7 +799,7 @@ section.cta {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 1rem;
-  height: 104px;
+  min-height: 104px;
 }
 
 section.cta .dividerLine {
@@ -853,7 +857,6 @@ section.recentDoctors h2 {
 section.recentDoctors .docsCard {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* place-items: center; */
   margin-block: 1rem 2rem;
   gap: 2rem;
 }
@@ -931,6 +934,14 @@ aside.missedApp a {
   font-weight: 600;
   font-size: 0.75rem;
   margin-top: .5rem;
+}
+
+.wrapper .centerLine {
+  display: none;
+}
+
+.calendarWrap {
+  display: none;
 }
 
 /* Desktop Styles */
@@ -1143,5 +1154,226 @@ aside.missedApp a {
     font-size: 1rem;
     font-weight: 500;
     background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  /* DASHBOARD */
+  .wrapper {
+    display: flex;
+    justify-content: space-between; 
+  }
+
+  .wrapper .doctor-dashboard {
+    width: 77%;
+    margin-inline-end: 1rem;
+  }
+
+  .wrapper .doctor-dashboard .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 160px);
+    margin-block: 1rem;
+  }
+
+  .grid-container .welcome {
+    padding: 0rem 1.5rem;
+    margin-block-end: 2rem;
+  }
+
+  .doctor-dashboard .welcomeWrap {
+    margin-block-start: 3rem;
+    padding-block: 0px;
+  }
+
+  .welcome .text-wrapper {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  
+  .welcome p.userName {
+    font-weight: 700;
+    font-size: 2.1rem;
+  }
+  
+  .welcome .welcome-line {
+    margin-block: 2rem;
+    width: 40%;
+    border-top: 1px solid white;
+  }
+  
+  .welcome p.tip {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .grid-container section.cta {
+    grid-column: span 2;
+    margin-block: .5rem ;
+  }
+
+  section.cta .appToday {
+    gap: .6rem;
+  }
+  
+  section.cta .appToday img {
+    width: 24%;
+  }
+
+  section.cta .appToday .appoint-details p.num {
+    font-size: 1.5rem;
+  }
+  
+  section.cta .appToday .appoint-details p.appt {
+    font-size: 1.2rem;
+  }
+  
+  section.cta .appToday .appoint-details p.today {
+    font-size: 1rem;
+  }
+
+  /* Section for Recent Doctors */  
+  section.recentDoctors h2 {
+    font-size: 1.8rem;
+  }
+  
+  section.recentDoctors .docsCard {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+  
+  section.recentDoctors .docsCard article .top img {
+    width: 75%;
+  }
+  
+  section.recentDoctors .docsCard article .top p.docName {
+    font-size: 1.1rem;
+  }
+  
+  section.recentDoctors .docsCard article .top p.role {
+    font-size: 0.9rem;
+  }
+  
+  section.recentDoctors .docsCard article .bottom {
+    gap: 0.3rem;
+    font-size: 1rem;
+  }
+
+  aside.missedApp {
+    display: none;
+  }
+  
+  /* Line Divider */
+  .wrapper .centerLine {
+    border-left: 1px solid var(--light-ash);
+    width: 0.2%;
+    display: unset;
+  }
+
+  /* Calendar */
+  .calendarWrap {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: unset;
+    width: 22.8%;
+  }
+
+  .calendarWrap aside.missedApp {
+    display: flex;
+  }
+  
+  .wrapper .react-calendar {
+    max-width: 200px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--light-ash);
+  }
+  
+  /* Customize the calendar header */
+  .react-calendar__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 1px;
+  }
+  
+  .react-calendar__navigation button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 1px;
+    color: var(--white);
+  }
+  
+  .react-calendar__navigation__label__labelText {
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--white);  
+  }
+  
+  .react-calendar__navigation button:hover {
+    color: #888;
+  }
+  
+  .react-calendar__navigation button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .react-calendar__navigation__label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* Customize the calendar weekdays */
+  .react-calendar__month-view__weekdays {
+    display: flex;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  
+  /* Customize the calendar days */
+  .react-calendar__month-view__days {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .react-calendar__tile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--light-ash);
+  }
+  
+  .react-calendar__tile:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .react-calendar__tile--now {
+    background-color: #000;
+    border-radius: 5px;
+    color: var(--white);
+    font-weight: bold;
+  }
+  
+  .react-calendar__tile--active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .react-calendar__tile--active:hover {
+    background-color: #0056b3;
   }
 }
