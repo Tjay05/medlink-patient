@@ -881,6 +881,16 @@ section.recentDoctors .docsCard article .top img {
   width: 50%;
 }
 
+section.recentDoctors .docsCard article .top p.docName {
+  margin-block-start: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+section.recentDoctors .docsCard article .top p.role {
+  font-size: 0.6rem;
+}
+
 section.recentDoctors .docsCard article .bottom {
   border-top: 1px solid var(--h2-color);
   display: flex;
@@ -891,6 +901,36 @@ section.recentDoctors .docsCard article .bottom {
   font-weight: 400;
   padding-block: .5rem;
   font-size: 0.65rem;
+}
+
+/* Aside for Missed Appointment */
+aside.missedApp {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-block: 3.5rem 2rem;
+}
+
+aside.missedApp button {
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  max-width: 217px;
+  background: hsla(104, 32%, 56%, 1);
+  border-radius: 5px;
+  font-family: inherit;
+  line-height: 20px;
+  padding: .6rem 1rem;
+  color: var(--white);
+}
+
+aside.missedApp a {
+  color: hsla(104, 32%, 56%, 1);
+  font-weight: 600;
+  font-size: 0.75rem;
+  margin-top: .5rem;
 }
 
 /* Desktop Styles */

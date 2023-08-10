@@ -42,8 +42,8 @@ const Dashboard = () => {
           <article>
             <div className="top">
               <img src={profilePic} alt="Profile" />
-              <p>Dr. Jacob Jones</p>
-              <p>General Doctor</p>
+              <p className='docName'>Dr. Jacob Jones</p>
+              <p className='role'>General Doctor</p>
             </div>
             <div className="bottom">
               <img src={clockIcon} alt="Profile" /> 
@@ -53,8 +53,8 @@ const Dashboard = () => {
           <article>
             <div className="top">
               <img src={profilePic} alt="Profile" />
-              <p>Dr. Jacob Jones</p>
-              <p>General Doctor</p>
+              <p className='docName'>Dr. Jacob Jones</p>
+              <p className='role'>General Doctor</p>
             </div>
             <div className="bottom">
               <img src={clockIcon} alt="Profile" /> 
@@ -63,6 +63,10 @@ const Dashboard = () => {
           </article>
         </div>
       </section>
+      <aside className="missedApp">
+        <button>Missed your Appointment?</button>
+        <a href="#">Reschedule your Appointment</a>
+      </aside>
     </div>
     </div>
    );
