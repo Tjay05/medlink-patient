@@ -1,5 +1,7 @@
 import appointmentIcon  from '../../assets/icons/today-appt.svg';
 import docIcon from '../../assets/icons/available-doc.svg'
+import clockIcon from '../../assets/icons/clock.svg';
+import profilePic from '../../assets/images/doc1.png';
 
 const Dashboard = () => {
   return ( 
@@ -18,24 +20,48 @@ const Dashboard = () => {
           <div className="appToday">
             <img src={appointmentIcon} alt="" />
             <div className="appoint-details">
-              <p>0</p>
-              <p>Appointments</p>
-              <p>Today</p>
+              <p className='num'>0</p>
+              <p className='appt'>Appointments</p>
+              <p className='today'>Today</p>
             </div>
           </div>
           <div className="dividerLine"></div>
           <div className="appToday">
             <img src={docIcon} alt="" />
             <div className="appoint-details">
-              <p>0</p>
-              <p>Appointments</p>
-              <p>Today</p>
+              <p className='num'>30</p>
+              <p className='appt'>Available Doctors</p>
+              <p className='today'>Today</p>
             </div>
           </div>
         </section> 
       </div>
-      <section className="recent-patients">
-
+      <section className="recentDoctors">
+        <h2>Today's Doctors</h2>
+        <div className="docsCard">
+          <article>
+            <div className="top">
+              <img src={profilePic} alt="Profile" />
+              <p>Dr. Jacob Jones</p>
+              <p>General Doctor</p>
+            </div>
+            <div className="bottom">
+              <img src={clockIcon} alt="Profile" /> 
+              <p>9:00 am to 2:30 pm</p>
+            </div>
+          </article>
+          <article>
+            <div className="top">
+              <img src={profilePic} alt="Profile" />
+              <p>Dr. Jacob Jones</p>
+              <p>General Doctor</p>
+            </div>
+            <div className="bottom">
+              <img src={clockIcon} alt="Profile" /> 
+              <p>9:00 am to 2:30 pm</p>
+            </div>
+          </article>
+        </div>
       </section>
     </div>
     </div>
@@ -43,3 +69,5 @@ const Dashboard = () => {
 }
  
 export default Dashboard;
+
+// 2526

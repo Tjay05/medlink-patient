@@ -26,6 +26,7 @@
   --h2-color: hsla(0, 1%, 61%, 1);
   --nav-font-color: hsla(115, 100%, 98%, 1);
   --bg-grey-lite: hsla(0, 0%, 98%, 1); ;
+  --ultralite-ash: hsla(0, 0%, 57%, 1);
 }
 
 /* Reset */
@@ -775,7 +776,7 @@ main.header .wrapper {
 
 .welcome .welcome-line {
   margin-block: .8rem;
-  width: 70%;
+  width: 50%;
   border-top: 1px solid white;
 }
 
@@ -800,16 +801,53 @@ section.cta {
 section.cta .dividerLine {
   border-left: 1px solid var(--black);
   height: 100%;
+  width: 1%;
+  margin-inline: .3rem;
 }
 
 section.cta .appToday {
   display: flex;
+  width: 49%;
   align-items: center;
   gap: 0.3rem;
 }
 
 section.cta .appToday img {
-  width: 30%;
+  width: 27%;
+}
+
+section.cta .appToday .appoint-details {
+  font-family: 'Poppins', sans-serif;
+}
+
+section.cta .appToday .appoint-details p.num {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--form-bg);
+}
+
+section.cta .appToday .appoint-details p.appt {
+  font-weight: 400;
+  font-size: 0.64rem;
+  color: var(--black);
+}
+
+section.cta .appToday .appoint-details p.today {
+  font-weight: 400;
+  font-size: 0.65rem;
+  color: var(--ultralite-ash);
+}
+
+/* Section for Recent Doctors */
+section.recentDoctors {
+  margin-block: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+section.recentDoctors h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--h2-color);
 }
 
 /* Desktop Styles */
