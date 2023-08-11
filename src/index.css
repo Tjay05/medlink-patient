@@ -27,6 +27,7 @@
   --nav-font-color: hsla(115, 100%, 98%, 1);
   --bg-grey-lite: hsla(0, 0%, 98%, 1); ;
   --ultralite-ash: hsla(0, 0%, 57%, 1);
+  --lite-pro-ash: hsla(0, 0%, 79%, 1);
 }
 
 /* Reset */
@@ -947,6 +948,96 @@ aside.missedApp a {
   display: none;
 }
 
+/* Reschedule Appointments Pages */
+.wrapper .rescheduleAppt {
+  font-family: 'Poppins', sans-serif;
+  width: 98%;
+  margin-inline: auto;
+}
+
+.wrapper .rescheduleAppt h2 {
+  color: var(--h3-color);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-block: .7rem 2rem;
+}
+
+.wrapper .rescheduleAppt h3 {
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-block: 1.5rem;
+  color: var(--lite-pro-ash);
+}
+
+.wrapper .rescheduleAppt form {
+  margin-block: 1.5rem 2rem;
+}
+
+.wrapper .rescheduleAppt form label {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.wrapper .rescheduleAppt form input {
+  font-family: 'Poppins', sans-serif;
+  width: 70%;
+  height: 37px;
+  font-size: .9rem;
+  padding-inline: .5rem;
+  margin-block: .3rem 2rem;
+}
+
+.wrapper .rescheduleAppt form .footerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-start: 4rem;
+}
+
+form .footerNav button {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  font-size: 0.8rem;
+  color: var(--white);
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  background-color: var(--h3-color);
+  margin-block-end: 1rem;
+}
+
+/* Confirm Rescheduling of Appointment */
+.wrapper .rescheduleAppt #body {
+  text-align: center;
+  font-weight: 600;
+}
+
+.rescheduleAppt #body p#head {
+  color: var(--h3-color);
+  margin-block: 1rem;
+  font-size: 1.2rem;
+}
+
+.rescheduleAppt #body p#notice {
+  font-style: italic;
+  font-size: .8rem;
+  color: var(--red);
+  margin-block-end: 3rem;
+}
+
+.rescheduleAppt #body button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  border: none;
+  font-size: 0.8rem;
+  color: var(--white);
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  background-color: var(--h3-color);
+  margin-block-end: 2rem;
+}
+
 /* Desktop Styles */
 @media(min-width: 768px) {
   /* Utility Style */
@@ -1378,5 +1469,18 @@ aside.missedApp a {
   
   .react-calendar__tile--active:hover {
     background-color: #0056b3;
+  }
+
+  /* Reschedule Appointment Pages */
+  .wrapper .rescheduleAppt {
+    width: 90%;
+  }
+
+  .wrapper .rescheduleAppt h2 {
+    font-size: 2.3rem;
+  }
+
+  .wrapper .rescheduleAppt h3 {
+    font-size: 1.2rem;
   }
 }

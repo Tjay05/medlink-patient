@@ -5,16 +5,29 @@ import {
   RouterProvider
 } from "react-router-dom";
 
+// ROUTES
+// Landing Page 
 import LandingPage from "./pages/LandingPage"
+
+// Signup Page
 import SignUp from "./pages/signup-login/SignUp"
 import Verification from "./pages/signup-login/Verification"
 import SucessSignup from "./pages/signup-login/SuccessSignUp"
+
+// Login and Change Password Pages
 import Login from "./pages/signup-login/Login"
 import ChangePword from "./pages/signup-login/ChangePword"
 import PwordVerification from "./pages/signup-login/PwordVerification"
 import NewPword from "./pages/signup-login/NewPword"
+
+// Navbar Layout
 import NavBar from "./layout/Navbar";
+
+// Body
 import Dashboard from "./pages/home/Dashboard";
+import AppointmentReschedule from "./pages/home/AppointRechedule1";
+import ApptReschedule2 from "./pages/home/AppointReschedule2";
+import ConfirmAppt from "./pages/home/ConfirmAppointment";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -29,6 +42,9 @@ const router = createBrowserRouter(
       <Route path='NewPassword' element={<NewPword/>} />
       <Route path='Home' element={<NavBar/>} >
         <Route index element={<Dashboard/>} />
+        <Route path="AppointmentReschedule" element={<AppointmentReschedule/>} />
+        <Route path="NextStep" element={<ApptReschedule2/>}/>
+        <Route path="Confirmed" element={<ConfirmAppt/>} />
       </Route>
     </Route>
   )

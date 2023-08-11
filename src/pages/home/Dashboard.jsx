@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import appointmentIcon  from '../../assets/icons/today-appt.svg';
 import docIcon from '../../assets/icons/available-doc.svg'
 import clockIcon from '../../assets/icons/clock.svg';
@@ -66,7 +68,7 @@ const Dashboard = () => {
         </section>
         <aside className="missedApp">
           <button>Missed your Appointment?</button>
-          <a href="#">Reschedule your Appointment</a>
+          <Link to="AppointmentReschedule">Reschedule your Appointment</Link>
         </aside>
       </div>
       <div className="centerLine"></div>
@@ -74,7 +76,7 @@ const Dashboard = () => {
         <Calendar />
         <aside className="missedApp">
           <button>Missed your Appointment?</button>
-          <a href="#">Reschedule your Appointment</a>
+          <Link to="AppointmentReschedule">Reschedule your Appointment</Link>
         </aside>
       </div>    
     </div>
