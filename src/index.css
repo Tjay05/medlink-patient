@@ -980,6 +980,9 @@ aside.missedApp a {
 }
 
 .wrapper .rescheduleAppt form input {
+  border: 1px solid var(--placeholder-color);
+  border-radius: 5px;
+  color: var(--placeholder-color);
   font-family: 'Poppins', sans-serif;
   width: 70%;
   height: 37px;
@@ -1482,5 +1485,24 @@ form .footerNav button {
 
   .wrapper .rescheduleAppt h3 {
     font-size: 1.2rem;
+  }
+
+  .wrapper .rescheduleAppt form input {
+    width: 30%;
+  }
+
+  /* Confirm Rescheduling of Appointment */
+  .rescheduleAppt #body {
+    width: 75%;
+    margin-inline: auto;
+  }
+
+  .rescheduleAppt #body p#head {
+    font-size: 2rem;
+  }
+
+  .rescheduleAppt #body p#notice {
+    margin-block-start: 4rem;
+    font-size: .9rem;
   }
 }
