@@ -97,6 +97,7 @@ img {
 /* Landing Page */
 .landPage {
   background: var(--landing-page-bg);
+  padding-block-end: 4rem;
 }
 
 /* Header */
@@ -216,6 +217,7 @@ main section.aboutUs aside img {
 .signUpPage {
   background: var(--signUp-bg);
   font-family: 'Poppins', sans-serif;
+  padding-block-end: 5rem;
 }
 
 .signUpPage header {
@@ -607,6 +609,7 @@ li.hamburger {
   margin-inline-end: 1rem;
   z-index: 999;
 }
+
 li.hamburger .hamburger-icon {  
   display: flex;
   flex-direction: column;
