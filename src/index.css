@@ -1162,6 +1162,80 @@ nav.slideNav ul.slideNav li a span {
   background-color: var(--h3-color);
 }
 
+.wrapper .paymentWrap {
+  font-family: 'Inter', sans-serif;
+} 
+
+.paymentWrap form h3 {
+  font-family: 'Roboto', sans-serif;
+  color: hsla(221, 8%, 55%, 1);
+  font-size: 0.85rem;
+  margin-block-end: 1rem;
+}
+
+.paymentWrap form label {
+  font-family: 'Inter', sans-serif;
+  color: hsla(0, 2%, 25%, 1);
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.paymentWrap form input {
+  border: 1px solid var(--placeholder-color);
+  border-radius: 5px;
+  color: var(--placeholder-color);
+  font-family: inherit;
+  width: 70%;
+  height: 37px;
+  font-size: .9rem;
+  padding-inline: .5rem;
+  margin-block: 0.3rem .9rem;
+} 
+
+.paymentWrap form .flexForm {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexForm .twoForms input {
+  width: 80%;
+}
+
+.paymentWrap .totalPayment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 300;
+  color: hsla(0, 2%, 25%, 1);
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
+
+.paymentWrap .totalPayment .subTotal, .platformFee, .total {
+  display: flex;
+  justify-content: space-between;
+  margin-block-start: .5rem;
+}
+
+.paymentWrap .totalPayment .total {
+  padding-top: .8rem;
+  border-top: 1px solid var(--otp-input-bg);
+  margin-block-end: 2rem;
+}
+
+.paymentWrap .totalPayment button {
+  align-self: center;
+  border: none;
+  font-family: inherit;
+  font-size: 0.75rem;
+  color: var(--white);
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  background-color: var(--h3-color);
+}
+
 /* Desktop Styles */
 @media(min-width: 768px) {
   /* Utility Style */
