@@ -38,7 +38,7 @@ const NavBar = () => {
         <nav className='header'>
           <ul className='leftNav'>
             <li><a><img src={logo} alt="Logo" /></a></li>
-            <li className='noShow'><NavLink to='/home/'>Home</NavLink></li>
+            <li className='noShow'><NavLink to='/Home'>Home</NavLink></li>
             <li className='noShow'><NavLink to='Appointments'>Appointments</NavLink></li>
             <li className='noShow'><NavLink to='Notifications'>Notifications</NavLink></li>
             <li className='noShow'><NavLink to='MedHistory'>Medical History</NavLink></li>
@@ -76,7 +76,7 @@ const NavBar = () => {
             <ul>
               <li>
                 <img src={home} alt="" />
-                <Link to='/home/'>Home</Link></li>
+                <Link to='/Home'>Home</Link></li>
               <li>
                 <img src={appointmentIcon} alt="" />
                 <Link to='Appointments'>Appointments</Link></li>

@@ -1213,6 +1213,7 @@ form .footerNav button {
   /* DESKTOP NAVBAR */
   header.patientHeader nav.header {
     padding-block: 2rem;
+    max-height: 72px;
   }
 
   nav.header ul.leftNav li.noShow {
@@ -1224,7 +1225,17 @@ form .footerNav button {
   }
 
   header.patientHeader nav.header ul.leftNav li a {
-    padding-inline: .8rem;
+    border: 2px solid transparent;
+    padding-inline: .75rem;
+    padding-block: .5rem;
+    border-radius: 5px;
+  }
+
+  /* Active State NavBar */
+  header.patientHeader nav.header ul.leftNav li a.active {
+    border: 2px solid var(--white);
+    color: var(--login-bg);
+    background: var(--white);
   }
 
   header.patientHeader nav.header ul.rightNav li.last {

@@ -28,6 +28,7 @@ import Dashboard from "./pages/home/Dashboard";
 import AppointmentReschedule from "./pages/home/AppointRechedule1";
 import ApptReschedule2 from "./pages/home/AppointReschedule2";
 import ConfirmAppt from "./pages/home/ConfirmAppointment";
+import DashboardWrap from "./layout/DashWrap";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -40,11 +41,13 @@ const router = createBrowserRouter(
       <Route path='ChangePassword' element={<ChangePword/>} />
       <Route path='PasswordVerification' element={<PwordVerification/>} />
       <Route path='NewPassword' element={<NewPword/>} />
-      <Route path='Home' element={<NavBar/>} >
-        <Route index element={<Dashboard/>} />
-        <Route path="AppointmentReschedule" element={<AppointmentReschedule/>} />
-        <Route path="NextStep" element={<ApptReschedule2/>}/>
-        <Route path="Confirmed" element={<ConfirmAppt/>} />
+      <Route element={<NavBar/>} >
+        <Route path="home" element={<DashboardWrap/>} >
+          <Route index element={<Dashboard/>} />
+          <Route path="AppointmentReschedule" element={<AppointmentReschedule/>} />
+          <Route path="NextStep" element={<ApptReschedule2/>}/>
+          <Route path="Confirmed" element={<ConfirmAppt/>} />
+        </Route>
       </Route>
     </Route>
   )

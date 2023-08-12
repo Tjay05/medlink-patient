@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Login = () => {
   const history = useNavigate();
 
-  const handleLogin = () => history('/Home/')
+  const handleLogin = () => history('/Home')
 
   return ( 
     <div className="container loginPage">
