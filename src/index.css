@@ -1711,4 +1711,117 @@ nav.slideNav ul.slideNav li a span {
     margin-block-start: 4rem;
     font-size: .9rem;
   }
+
+  /* Appointment Page */
+  .wrapper .AppWraPPer {
+    width: 90%;
+  }
+
+  .wrapper .AppWraPPer h2 {
+    font-size: 2.1rem;
+  }
+
+  .wrapper .AppWraPPer nav.slideNav ul.slideNav {
+    font-size: 1rem;
+  }
+
+  nav.slideNav ul.slideNav li a {
+    border-bottom: 3px solid var(--lite-pro-ash);
+  }
+  
+  nav.slideNav ul.slideNav li a.active {
+    color: var(--h3-color);
+    border-bottom: 3px solid var(--h3-color);
+  }
+  
+  nav.slideNav ul.slideNav li a span {
+    font-size: 1.3rem;
+  }
+
+  .wrapper .AppWraPPer .appBody {
+    margin-block: 2rem;
+  }
+  
+  .wrapper .AppWraPPer .appBody .appBodyWrapper {
+    width: 90%;
+    grid-template-columns: repeat(6, 1fr);
+    font-size: .7rem;
+  }
+  
+  .appBody .appBodyWrapper .specialist {
+    margin: .6rem .5rem;
+  }
+  
+  .appBodyWrapper .specialist img {
+    width: 33%;
+  }
+
+  .wrapper .appPayDateWrap {
+    width: 92%;
+  }
+  
+  .wrapper .appPayDateWrap form label {
+    font-size: .9rem;
+  }
+  
+  .wrapper .appPayDateWrap form input {
+    font-family: inherit;
+    width: 30%;
+  }
+  
+  .wrapper .appPayDateWrap form .footerNav {
+    margin-block-start: 4rem;
+  }
+
+  .wrapper .confirmApp {
+    width: 76%;
+    margin-inline: auto;
+  }
+
+  .wrapper .confirmApp h2 {
+    font-size: 2rem;
+  }
+  
+  .confirmApp .footerNav {
+    margin-block: 9rem 1rem;
+  }
+
+  .confirmApp .footerNav button {
+    text-transform: unset;
+    font-size: 0.8rem;
+  }
+  
+  .paymentWrap form h3 {
+    font-size: 0.85rem;
+    margin-block-end: 1rem;
+  }
+
+  .paymentWrap {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 260px;
+  }
+  
+  .paymentWrap form {
+    width: 57%;
+  }
+
+  .paymentWrap .formDivider {
+    border-left: 1px solid var(--light-ash);
+    height: 100%;
+    margin-inline: 1%;
+    width: 1%;
+  }
+
+  .paymentWrap .totalPayment {
+    width: 40%;
+  }
+  
+  .paymentWrap form label {
+    font-family: 'Inter', sans-serif;
+    color: hsla(0, 2%, 25%, 1);
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
 }
