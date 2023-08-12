@@ -33,6 +33,7 @@ import ConfirmAppt from "./pages/home/ConfirmAppointment";
 
 // Appointment
 import AppointmentWrap from "./layout/AppWrap";
+import Appointment from "./pages/appointment/Appointment";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -53,7 +54,7 @@ const router = createBrowserRouter(
           <Route path="Confirmed" element={<ConfirmAppt/>} />
         </Route>
         <Route path="Appointments" element={<AppointmentWrap/>}>
-
+          <Route index element={<Appointment/>} />
         </Route>
       </Route>
     </Route>

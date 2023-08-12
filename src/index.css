@@ -1041,6 +1041,71 @@ form .footerNav button {
   margin-block-end: 2rem;
 }
 
+/* Appointment Page */
+.wrapper .AppWraPPer {
+  font-family: 'Poppins', sans-serif;
+  width: 98%;
+  margin-inline: auto;
+}
+
+.wrapper .AppWraPPer h2 {
+  color: var(--h3-color);
+  font-weight: 600;
+  font-size: 1.26rem;
+  margin-block: .7rem 1rem;
+}
+
+.wrapper .AppWraPPer nav.slideNav ul.slideNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 0.43rem;
+  color: var(--lite-pro-ash);
+}
+
+nav.slideNav ul.slideNav li a {
+  border-bottom: 2px solid var(--lite-pro-ash);
+}
+
+nav.slideNav ul.slideNav li a.active {
+  color: var(--h3-color);
+  border-bottom: 2px solid var(--h3-color);
+}
+
+nav.slideNav ul.slideNav li a span {
+  font-size: 0.6rem;
+}
+
+.wrapper .AppWraPPer .appBody {
+  margin-block: 2rem;
+}
+
+.wrapper .AppWraPPer .appBody .appBodyWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: .7rem;
+}
+
+.appBody .appBodyWrapper .specialist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: .5rem ;
+  border-radius: 5px;
+  background-color: hsla(115, 100%, 98%, 1);
+}
+
+.appBodyWrapper .specialist img {
+  width: 40%;
+}
+
+.appBodyWrapper .specialist p {
+  text-align: center;
+}
+
 /* Desktop Styles */
 @media(min-width: 768px) {
   /* Utility Style */
