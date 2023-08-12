@@ -34,6 +34,8 @@ import ConfirmAppt from "./pages/home/ConfirmAppointment";
 // Appointment
 import AppointmentWrap from "./layout/AppWrap";
 import Appointment from "./pages/appointment/Appointment";
+import ChooseAppDate from "./pages/appointment/ChooseDate";
+import ConfirmApp from "./pages/appointment/ConfirmAppointment";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -55,6 +57,8 @@ const router = createBrowserRouter(
         </Route>
         <Route path="Appointments" element={<AppointmentWrap/>}>
           <Route index element={<Appointment/>} />
+          <Route path="PickDate" element={<ChooseAppDate/>}/>
+          <Route path="ConfirmAppointment" element={<ConfirmApp/>}/>
         </Route>
       </Route>
     </Route>

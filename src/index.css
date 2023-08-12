@@ -1061,7 +1061,7 @@ form .footerNav button {
   align-items: center;
   justify-content: space-between;
   font-weight: 600;
-  font-size: 0.43rem;
+  font-size: 0.4rem;
   color: var(--lite-pro-ash);
 }
 
@@ -1085,7 +1085,7 @@ nav.slideNav ul.slideNav li a span {
 .wrapper .AppWraPPer .appBody .appBodyWrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  font-size: .7rem;
+  font-size: .6rem;
 }
 
 .appBody .appBodyWrapper .specialist {
@@ -1094,16 +1094,72 @@ nav.slideNav ul.slideNav li a span {
   align-items: center;
   justify-content: center;
   margin: .5rem ;
+  padding: .5rem .05rem;
+  cursor: pointer;
   border-radius: 5px;
   background-color: hsla(115, 100%, 98%, 1);
 }
 
 .appBodyWrapper .specialist img {
-  width: 40%;
+  width: 33%;
 }
 
 .appBodyWrapper .specialist p {
+  margin-block-start: 1rem;
   text-align: center;
+}
+
+.wrapper .appPayDateWrap {
+  width: 96%;
+  font-family: 'Poppins', sans-serif;
+  margin-inline: auto;
+}
+
+.wrapper .appPayDateWrap form label {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.wrapper .appPayDateWrap form input {
+  border: 1px solid var(--placeholder-color);
+  border-radius: 5px;
+  color: var(--placeholder-color);
+  font-family: inherit;
+  width: 70%;
+  height: 37px;
+  font-size: .9rem;
+  padding-inline: .5rem;
+  margin-block: .3rem 2rem;
+}
+
+.wrapper .appPayDateWrap form .footerNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-start: 2rem;
+}
+
+.confirmApp {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.confirmApp .footerNav {
+  margin-block: 8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confirmApp .footerNav button {
+  text-transform: uppercase;
+  border: none;
+  font-size: 0.6rem;
+  color: var(--white);
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  background-color: var(--h3-color);
 }
 
 /* Desktop Styles */
@@ -1299,8 +1355,8 @@ nav.slideNav ul.slideNav li a span {
   /* Active State NavBar */
   header.patientHeader nav.header ul.leftNav li a.active {
     border: 2px solid var(--white);
-    color: var(--login-bg);
-    background: var(--white);
+    /* color: var(--login-bg);
+    background: var(--white); */
   }
 
   header.patientHeader nav.header ul.rightNav li.last {

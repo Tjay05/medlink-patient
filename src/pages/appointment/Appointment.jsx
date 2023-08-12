@@ -12,63 +12,69 @@ import dentist from '../../assets/icons/dentist.svg';
 import opthalmology from '../../assets/icons/opthalmology.svg';
 import cardiolody from '../../assets/icons/heartDoc.svg';
 import nephrology from '../../assets/icons/nephrology.svg';
+import { useNavigate } from 'react-router-dom';
 
 const Appointment = () => {
+  const history = useNavigate();
+  const handleClick = () => {
+    history('PickDate');
+  }
+
   return ( 
     <div className="appBodyWrapper">
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={generalDoc} alt="General Doctor" />
         <p>General Practitioner</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={pediatric} alt="Pediatrician" />
         <p>Pediatrics</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={gynaecologist} alt="Gynaecologist" />
         <p>Gynaecologist</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={orthopaedics} alt="Orthopaedician" />
         <p>Orthopaedics</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={gastro} alt="Gastroentologist" />
         <p>Gastroentologist</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={urologist} alt="Urologist" />
         <p>Urologist</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={oncology} alt="Oncologist" />
         <p>Oncologist</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={pulmonologist} alt="Pulmonologist" />
         <p>Pulmonologist</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={physical_therapy} alt="Physical Therapist" />
         <p>Psychiatrist</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={endocrinologist} alt="Endocrinologist" />
         <p>Endocrinologist</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={dentist} alt="Dentist" />
         <p>Dentist</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={opthalmology} alt="Opthalmologist" />
         <p>Opthalmologist</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={cardiolody} alt="Cardiologist" />
         <p>Cardiologist</p>
       </div>
-      <div className='specialist'>
+      <div onClick={handleClick} className='specialist'>
         <img src={nephrology} alt="Nephrologist" />
         <p>Nephrologist</p>
       </div>
