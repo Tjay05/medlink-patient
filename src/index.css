@@ -1499,8 +1499,12 @@ nav.slideNav ul.slideNav li a span {
   /* Active State NavBar */
   header.patientHeader nav.header ul.leftNav li a.active {
     border: 2px solid var(--white);
-    /* color: var(--login-bg);
-    background: var(--white); */
+  }
+  
+  header.patientHeader nav.header ul.leftNav li a:hover {
+    color: var(--login-bg);
+    background: var(--white);
+    transition: background 1s ease-in-out;
   }
 
   header.patientHeader nav.header ul.rightNav li.last {
