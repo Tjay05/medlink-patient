@@ -1,6 +1,12 @@
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  }
   const history = useNavigate();
 
   const handleLogin = () => history('/Home')
@@ -26,11 +32,16 @@ const Login = () => {
             <br />
             <label htmlFor="Password">Enter your Password</label>
             <br />
-            <input 
-              type="password" 
-              id="Password"
-              placeholder="Enter your Password"
-            />
+            <div className="passVisibility">
+              <input
+                type={showPassword ? 'text' : 'password'}
+                id="Password"
+                placeholder="Enter your Password"
+              />
+              <div className='showPword' onClick={togglePasswordVisibility} >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </div>
+            </div>
           </form>
           <p><Link to="/ChangePassword">Forgot Password</Link></p>
         </div>

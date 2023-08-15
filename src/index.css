@@ -517,6 +517,19 @@ form.verify button {
   font-size: 0.9rem;
 }
 
+.passVisibility {
+  position: relative;
+} 
+
+.passVisibility .showPword {
+  position: absolute;
+  top: 40%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--login-bg);
+}
+
 .loginPage main button {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
