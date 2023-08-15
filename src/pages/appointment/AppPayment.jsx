@@ -41,60 +41,49 @@ const AppointmentPAyment = () => {
               placeholder="example@yahoo.com"
             />
             <br />
-      <Cards
-        number={state.number}
-        expiry={state.expiry}
-        cvc={state.cvc}
-        name={state.name}
-        focused={state.focus}
-      />
-      <input
-        type="number"
-        name="number"
-        placeholder="Card Number"
-        value={state.number}
-        onChange={handleInputChange}
-        onFocus={handleInputFocus}
-      />
-      <input
-        type="number"
-        name="expiry"
-        placeholder="Valid Thru"
-        value={state.expiry}
-        onChange={handleInputChange}
-        onFocus={handleInputFocus}
-      />
-      <input
-        type="number"
-        name="cvc"
-        placeholder="CVC"
-        value={state.cvc}
-        onChange={handleInputChange}
-        onFocus={handleInputFocus}
-      />
+            <Cards
+              number={state.number}
+              expiry={state.expiry}
+              cvc={state.cvc}
+              name={state.name}
+              focused={state.focus}
+            />
             <label htmlFor="cardNumber">Credit/Debit Card Number</label>
             <br />
             <input 
-              type="text" 
+              type="number" 
               id="cardNumber"
+              name="number"
               placeholder="XXXX  XXXX  XXXX  XXXX"
+              value={state.number}
+              onChange={handleInputChange}
+              onFocus={handleInputFocus}
             />
             <div className="flexForm">
               <div className="twoForms">
                 <label htmlFor="Expiry">Expiry Date</label>
                 <br />
                 <input
-                  type="month"
+                  type="number"
                   id="Expiry"
+                  name="expiry"
+                  placeholder="Valid Thru"
+                  value={state.expiry}
+                  onChange={handleInputChange}
+                  onFocus={handleInputFocus}
                 />
               </div>
               <div className="twoForms">
                 <label htmlFor="CVV">CVV</label>
                 <br />
                 <input
-                  type="text"
                   id="CVV"
-                  placeholder="XXX"
+                  type="number"
+                  name="cvc"
+                  placeholder="CVC"
+                  value={state.cvc}
+                  onChange={handleInputChange}
+                  onFocus={handleInputFocus}
                 />
               </div>
             </div>
