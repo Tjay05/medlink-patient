@@ -1,11 +1,30 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Cards from "react-credit-cards-2";
 
 const AppointmentPAyment = () => {
   const [isUploading, setIsUploading] = useState(false);
 
   const handleClick = () => {
     setIsUploading(true);
+  }
+
+  const [state, setState] = useState({
+    number: '',
+    expiry: '',
+    cvc: '',
+    name: '',
+    focus: '',
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    
+    setState((prev) => ({ ...prev, [name]: value }));
+  }
+
+  const handleInputFocus = (e) => {
+    setState((prev) => ({ ...prev, focus: e.target.name }));
   }
 
   return ( 
@@ -22,6 +41,37 @@ const AppointmentPAyment = () => {
               placeholder="example@yahoo.com"
             />
             <br />
+      <Cards
+        number={state.number}
+        expiry={state.expiry}
+        cvc={state.cvc}
+        name={state.name}
+        focused={state.focus}
+      />
+      <input
+        type="number"
+        name="number"
+        placeholder="Card Number"
+        value={state.number}
+        onChange={handleInputChange}
+        onFocus={handleInputFocus}
+      />
+      <input
+        type="number"
+        name="expiry"
+        placeholder="Valid Thru"
+        value={state.expiry}
+        onChange={handleInputChange}
+        onFocus={handleInputFocus}
+      />
+      <input
+        type="number"
+        name="cvc"
+        placeholder="CVC"
+        value={state.cvc}
+        onChange={handleInputChange}
+        onFocus={handleInputFocus}
+      />
             <label htmlFor="cardNumber">Credit/Debit Card Number</label>
             <br />
             <input 

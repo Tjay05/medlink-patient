@@ -360,6 +360,7 @@ form.verify .otp input {
   width: 70px;
   height: 70px;
   text-align: center;
+  padding-inline-start: 1rem;
   margin-block: 2rem;
   background: var(--otp-input-bg);
   font-size: 3rem;
