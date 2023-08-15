@@ -1,4 +1,13 @@
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
 const NewPword = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  }
+
   return ( 
     <div className="container changePword loginPage">
       <header>
@@ -12,18 +21,23 @@ const NewPword = () => {
           <form>
             <label htmlFor="password">Enter New Password</label>
             <br />
-            <input 
-              type="password"
-              id="password"
-              placeholder="New Password"
-            />
+            <div className="passVisibility">
+              <input
+                type={showPassword ? 'text' : 'password'}
+                id="password"
+                placeholder="New Password"
+              />
+              <div className='showPword' onClick={togglePasswordVisibility} >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </div>
+            </div>
             <br />
             <label htmlFor="newPassword">Confirm Password</label>
             <br />
-            <input 
-              type="password"
+            <input
+              type={showPassword ? 'text' : 'password'}
               id="newPassword"
-              placeholder="Confirm Password" 
+              placeholder="Confirm Password"
             />
           </form> 
         </div>
