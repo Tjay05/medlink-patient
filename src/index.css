@@ -1504,7 +1504,7 @@ nav.slideNav ul.slideNav li a span {
   header.patientHeader nav.header ul.leftNav li a:hover {
     color: var(--login-bg);
     background: var(--white);
-    transition: background 1s ease-in-out;
+    transition: background .7s ease-in-out;
   }
 
   header.patientHeader nav.header ul.rightNav li.last {
