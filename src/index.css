@@ -621,7 +621,7 @@ a.initials {
 }
 
 .headerFooter .header .crumb:after {
-  content: '>';
+  content: url(assets/icons/dots.svg);
   margin-inline-start: .8rem;
 }
 
@@ -1547,6 +1547,14 @@ nav.slideNav ul.slideNav li a span {
     background-color: rgba(255, 255, 255, 0.08);
   }
 
+  .headerFooter {
+    padding-block: 1rem;
+    max-height: 100px;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 600;
+  }
+
   /* DASHBOARD */
   .wrapper {
     display: flex;
@@ -1697,6 +1705,7 @@ nav.slideNav ul.slideNav li a span {
     font-size: 16px;
     padding: 1px;
     color: var(--white);
+    margin-block-end: .5rem;
   }
   
   .react-calendar__navigation__label__labelText {
