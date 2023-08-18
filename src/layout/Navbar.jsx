@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { NavLink, Link, Outlet } from 'react-router-dom';
+import { NavLink, Link, Outlet, useLocation } from 'react-router-dom';
 
 import logo from './../assets/icons/logo2.svg';
 import blocks from './../assets/icons/blocks.svg';
@@ -11,6 +11,19 @@ import notifyIcon from './../assets/icons/note-nav.svg';
 import record from './../assets/icons/record.svg';
 
 const NavBar = () => {
+  const location = useLocation();
+  let currentLink = ''
+  const crumbs = location.pathname.split('/')
+    .filter(crumb => crumb !== '')
+    .map(crumb => {
+      currentLink += `/${crumb}`
+      return (
+        <div className="crumb" key={crumb}>
+          <Link to={currentLink}>{crumb}</Link>
+        </div>
+      )
+    })
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -67,7 +80,7 @@ const NavBar = () => {
             </div>
           </li>
         ) : (
-            <p className='header'>Home</p> 
+            <div className='header'>{crumbs}</div> 
         )}
       </div>
       {isMobile && (
