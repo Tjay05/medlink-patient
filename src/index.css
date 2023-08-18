@@ -609,10 +609,24 @@ a.initials {
   z-index: 90;
 }
 
-.headerFooter p.header {
+.headerFooter .header {
   padding-inline: 5rem;
   font-family: 'Poppins', sans-serif;
   color: #c9c9c9;
+}
+
+.headerFooter .header > * {
+  display: inline-block;
+  margin-inline-end: .8rem;
+}
+
+.headerFooter .header .crumb:after {
+  content: '>';
+  margin-inline-start: .8rem;
+}
+
+.headerFooter .header .crumb:last-child::after {
+  display: none;
 }
 
 /* Hamburger Menu */ 
