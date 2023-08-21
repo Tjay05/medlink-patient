@@ -2,9 +2,11 @@ import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Verification = () => {
-  const navigate = useNavigate();
+  const history = useNavigate();
   const [otp, setOtp] = useState("");
   const inputRefs = useRef([]);
+
+  const [data, setData] = useState('')
 
   const handleChange = (index, value) => {
     if (value.length > 1) {
@@ -28,9 +30,38 @@ const Verification = () => {
     }
   };
 
-  const handleClick = () => {
-    navigate("/SuccessfulSignedUp");
-  };
+  const handleClick = async (e) => {
+    e.preventDefault()
+    console.log(otp);
+    console.log('otp clicked');
+    
+    try {
+      const response = await fetch('https://hospital-management-backend.onrender.com/patient/verify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({otp}),
+      });
+      const data = await response.json()
+      setData(data);
+      if (response.ok) {
+        history("/SuccessfulSignedUp")  
+        console.log(data);      
+      } else if(response.status === 401) {
+        setData(data)
+        console.log('error for 401', data);
+      } else if (response.status === 404) {
+        setData(data)
+        console.log('error for 404', data);
+      } else {
+        setData('Couldnt not verify account')
+      }
+    }
+    catch(error) {
+      console.log('Tosin fd up', error);
+    }
+  }
 
   return (
     <div className="container verificationPage">
@@ -62,6 +93,7 @@ const Verification = () => {
               />
             ))}
           </div>
+          <p className="err-mssg">{data.message}</p>
           <button onClick={handleClick}>Next</button>
         </form>
       </main>

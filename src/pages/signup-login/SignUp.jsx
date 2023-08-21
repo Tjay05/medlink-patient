@@ -124,6 +124,7 @@ const SignUp = () => {
               />
             </div>
           </div>
+          <p className="err-mssg">{data}</p>
           <button onClick={handleSubmit} >Register</button>
         </form>
       </main>
