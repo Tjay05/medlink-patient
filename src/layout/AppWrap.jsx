@@ -1,6 +1,19 @@
+import { useState } from "react";
+import { createContext } from "react";
 import { Link, NavLink, Outlet } from "react-router-dom";
 
+const AppContext = createContext();
 const AppointmentWrap = () => {
+  const [specialistType, setSpecialistType] = useState('');
+  const [appointmentDate, setAppointmentDate] = useState('');
+  const [appointmentTime, setAppointmentTime] = useState('');
+
+  const contextValue = {
+    specialistType, setSpecialistType,
+    appointmentDate, setAppointmentDate,
+    appointmentTime, setAppointmentTime
+  };
+
   return (
     <div className="wrapper">
       <div className="AppWraPPer">
@@ -14,7 +27,9 @@ const AppointmentWrap = () => {
           </ul>
         </nav>
         <div className="appBody">
-          <Outlet/>
+          <AppContext.Provider value={contextValue}>
+            <Outlet/>
+          </AppContext.Provider>
         </div>
       </div>
     </div>
@@ -22,3 +37,4 @@ const AppointmentWrap = () => {
 }
  
 export default AppointmentWrap;
+export {AppContext};
