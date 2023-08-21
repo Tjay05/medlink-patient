@@ -17,13 +17,12 @@ import { useContext } from 'react';
 import { AppContext } from '../../layout/AppWrap';
 
 const Appointment = () => {
-  const { specialistType, setSpecialistType } = useContext(AppContext);
+  const { setSpecialistType } = useContext(AppContext);
 
   const history = useNavigate();
   const handleClick = (type) => {
     setSpecialistType(type)
-    // history('PickDate');
-    console.log(specialistType);
+    history('PickDate');
   }
 
   return ( 
