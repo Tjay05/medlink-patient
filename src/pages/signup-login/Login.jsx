@@ -23,7 +23,7 @@ const Login = () => {
         },
         body: JSON.stringify({
           id: patientId,
-          password: password,
+          password
         }),
       });
       const data = await response.json()
