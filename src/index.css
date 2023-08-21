@@ -275,6 +275,7 @@ main section.aboutUs aside img {
 .signupForm select {
   border-radius: 5px;
   padding-inline-start: .5rem;
+  margin-bottom: 2rem;
   height: 40px;
   width: 100%;
   font-size: .9rem;
