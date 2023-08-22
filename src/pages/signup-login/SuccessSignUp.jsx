@@ -10,7 +10,7 @@ const SucessSignup = () => {
     <div className="successSignupPage container">
       <header>
         <nav>
-          <p><span className="white-line">Me</span>dli<span className="red-line">nk</span></p> 
+          <p><span><div className="white-line"></div>Me</span>dli<span> <div className="red-line"></div>nk</span></p> 
         </nav>
       </header>
       <main>
