@@ -30,6 +30,12 @@ const Login = () => {
       setData(data);
       if (response.ok) {
         history('/Home');
+        localStorage.setItem('patient', JSON.stringify({
+          firstname: data.firstname,
+          lastname: data.lastname,
+          id: data.id,
+          email: data.email
+        }));       
       } else if(response.status === 401) {
           setData(data)
           console.log('error for 401 ', data)
