@@ -89,16 +89,16 @@ const NavBar = () => {
             <ul>
               <li>
                 <img src={home} alt="" />
-                <Link to='/Home'>Home</Link></li>
+                <Link to='/Home' onClick={toggleMenu}>Home</Link></li>
               <li>
                 <img src={appointmentIcon} alt="" />
-                <Link to='Appointments/'>Appointments</Link></li>
+                <Link to='Appointments/' onClick={toggleMenu}>Appointments</Link></li>
               <li>
                 <img src={notifyIcon} alt="" />
-                <Link to='Notifications'>Notifications</Link></li>
+                <Link to='Notifications' onClick={toggleMenu}>Notifications</Link></li>
               <li>
                 <img src={record} alt="" />
-                <Link to='MedHistory'>Medical History</Link></li>
+                <Link to='MedHistory' onClick={toggleMenu}>Medical History</Link></li>
             </ul>
           </nav>
         </aside>
