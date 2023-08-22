@@ -271,6 +271,16 @@ main section.aboutUs aside img {
   bottom: 3px;
 }
 
+/* ERROR MESSAGE */
+p.err-mssg {
+  text-align: left;
+  font-style: italic;
+  color: hsla(0, 100%, 50%, 0.7);
+  font-weight: 500;
+  font-size: 0.7rem;
+  font-family: inherit;
+}
+
 /* SignUp Main */
 .signUpPage main {
   margin-block: 2rem;
@@ -290,6 +300,10 @@ main section.aboutUs aside img {
   justify-content: center;
   width: 100%;
   gap: 1rem;
+}
+
+.signUpPage main form .signupForm .firstForm, .signUpPage main form .signupForm .secondForm {
+  width: 50%;
 }
 
 .signUpPage main form input { 
@@ -613,6 +627,10 @@ form.verify button {
   transform: translateY(-50%);
   cursor: pointer;
   color: var(--login-bg);
+}
+
+.signUpPage .passVisibility .showPword {
+  top: 32%;
 }
 
 .loginPage main button {

@@ -1,3 +1,4 @@
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -10,14 +11,33 @@ const SignUp = () => {
   const [gender, setGender] = useState('');
   const [dob, setDob] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('')
 
   const [data, setData] = useState('');
+
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  }
 
   const history = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log('Signup-btn clicked');
+
+    // Password validation
+    if (password !== confirmPassword) {
+      setData('Passwords do not match');
+      return;
+    }
+
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!passwordRegex.test(password)) {
+      setData('Password must contain at least 8 characters, including uppercase, lowercase, numbers, and special characters');
+      return;
+    }
+
     try {
       const response = await fetch('https://hospital-management-backend.onrender.com/patient/register', {
         method: 'POST',
@@ -90,12 +110,17 @@ const SignUp = () => {
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
-              <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              <div className="passVisibility">
+                <input
+                  type={ showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <div className='showPword' onClick={togglePasswordVisibility} >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </div>
+              </div>
             </div>
             <div className="secondForm">
               <input
@@ -119,8 +144,8 @@ const SignUp = () => {
               <input 
                 type="password" 
                 placeholder="Confirm Password" 
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </div>
           </div>
