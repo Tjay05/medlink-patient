@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { PatientContext } from "../../App";
 
-const SucessSignup = () => {
+const SucessSignup = ( ) => {
+  const { patientData } = useContext(PatientContext);
+
   const history = useNavigate();
+  console.log(patientData);
   const handleClick = () => {
     history('/Login')
   }

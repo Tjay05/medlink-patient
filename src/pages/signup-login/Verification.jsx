@@ -1,7 +1,11 @@
+import { useContext } from "react";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { PatientContext } from "../../App";
 
 const Verification = () => {
+  const { setPatientData } = useContext(PatientContext);
+
   const history = useNavigate();
   const [otp, setOtp] = useState("");
   const inputRefs = useRef([]);
@@ -44,7 +48,7 @@ const Verification = () => {
         body: JSON.stringify({OTP: otp}),
       });
       const data = await response.json()
-      setData(data);
+      setPatientData(data);
       if (response.ok) {
         history("/SuccessfulSignedUp")  
         console.log(data);      

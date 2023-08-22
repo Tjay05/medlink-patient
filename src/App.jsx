@@ -38,6 +38,10 @@ import ChooseAppDate from "./pages/appointment/ChooseDate";
 import ConfirmApp from "./pages/appointment/ConfirmAppointment";
 import AppointmentPAyment from "./pages/appointment/AppPayment";
 import Notifications from "./pages/Notification";
+import { useState } from "react";
+import { createContext } from "react";
+
+export const PatientContext = createContext()
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -45,7 +49,7 @@ const router = createBrowserRouter(
       <Route index element={<LandingPage/>}/>  
       <Route path='SignUp' element={<SignUp/>} /> 
       <Route path='Verification' element={<Verification/>} />
-      <Route path='SuccessfulSignedUp' element={<SucessSignup/>}/>
+      <Route path='SuccessfulSignedUp' element={<SucessSignup />}/>
       <Route path='Login' element={<Login/>} />
       <Route path='ChangePassword' element={<ChangePword/>} />
       <Route path='PasswordVerification' element={<PwordVerification/>} />
@@ -68,10 +72,13 @@ const router = createBrowserRouter(
     </Route>
   )
 )
-
+  
 function App() {
+  const [patientData, setPatientData] = useState('');
   return (
-    <RouterProvider router={router} />
+    <PatientContext.Provider value={{patientData, setPatientData}}>
+      <RouterProvider router={router} patientData={patientData} setPatientData={setPatientData} />
+    </PatientContext.Provider>
   )
 }
 
