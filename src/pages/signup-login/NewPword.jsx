@@ -12,7 +12,7 @@ const NewPword = () => {
     <div className="container changePword loginPage">
       <header>
         <nav>
-          <p><span><div className="white-line"></div>Me</span>dli<span> <div className="red-line"></div>nk</span></p>
+          <p><span><a className="white-line"></a>Me</span>dli<span> <a className="red-line"></a>nk</span></p>
         </nav>
       </header>
       <main>

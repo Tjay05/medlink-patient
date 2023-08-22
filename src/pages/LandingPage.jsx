@@ -18,7 +18,7 @@ const LandingPage = () => {
     <div className='container landPage'>
       <header>
         <nav>
-          <p><span><div className="white-line"></div>Me</span>dli<span> <div className="red-line"></div>nk</span></p>
+          <p><span><a className="white-line"></a>Me</span>dli<span> <a className="red-line"></a>nk</span></p>
           <button onClick={handleClick} >Sign Up</button>
         </nav>
       </header>
