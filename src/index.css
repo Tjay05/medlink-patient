@@ -443,18 +443,36 @@ form.verify button {
   margin-block: 2rem;
 }
 
+.successSignupPage header nav {
+  display: flex;
+  align-items: center;
+}
+
 .successSignupPage header nav p {
   font-weight: 600;
   color: var(--white);
   font-size: 2rem;
+  display: flex;
+  align-items: center;
 }
 
-.successSignupPage header nav p span.white-line {
+.successSignupPage header nav p span {
+  position: relative;
+  width: 100%;
+}
+
+.successSignupPage header nav p span .white-line {
   border-top: 3px solid var(--white);
+  position: absolute;
+  width: 100%;
+  top: 3px;
 }
 
-.successSignupPage header nav p span.red-line {
+.successSignupPage header nav p span .red-line {
   border-bottom: 3px solid var(--red);
+  position: absolute;
+  bottom: 3px;
+  width: 100%;
 }
 
 .successSignupPage main {
@@ -506,18 +524,34 @@ form.verify button {
   margin-block: 1.5rem;
 }
 
+.loginPage header nav {
+  display: flex;
+}
+
 .loginPage header nav p {
+  display: flex;
   font-weight: 600;
   color: var(--white);
   font-size: 2rem;
 }
 
-.loginPage header nav p span.white-line {
-  border-top: 3px solid var(--white);
+.loginPage header nav p span {
+  position: relative;
+  width: 100%;
 }
 
-.loginPage header nav p span.red-line {
+.loginPage header nav p span .white-line {
+  border-top: 3px solid var(--white);
+  width: 100%;
+  top: 3px;
+  position: absolute;
+}
+
+.loginPage header nav p span .red-line {
   border-bottom: 3px solid var(--red);
+  width: 100%;
+  bottom: 3px;
+  position: absolute;
 }
 
 /* Login Main */
