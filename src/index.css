@@ -120,7 +120,6 @@ img {
 
 .landPage header nav p span {
   position: relative;
-  /* display: inline-block; */
   width: 100%;
 }
 
@@ -239,18 +238,37 @@ main section.aboutUs aside img {
   margin-block: 2rem;
 }
 
+.signUpPage header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .signUpPage header nav p {
   font-weight: 600;
   color: var(--white);
+  display: flex;
+  align-items: center;
   font-size: 2rem;
 }
 
-.signUpPage header nav p span.white-line {
-  border-top: 3px solid var(--white);
+.signUpPage header nav p span {
+  position: relative;
+  width: 100%;
 }
 
-.signUpPage header nav p span.red-line {
+.signUpPage header nav p span .white-line {
+  border-top: 3px solid var(--white);
+  position: absolute;
+  width: 100%;
+  top: 3px;
+}
+
+.signUpPage header nav p span .red-line {
   border-bottom: 3px solid var(--red);
+  position: absolute;
+  width: 100%;
+  bottom: 3px;
 }
 
 /* SignUp Main */
@@ -323,18 +341,36 @@ form input.confirm-password {
   margin-block: 2rem;
 }
 
+.verificationPage header nav {
+  display: flex;
+  align-items: center;
+}
+
 .verificationPage header nav p {
   font-weight: 600;
   color: var(--white);
+  display: flex;
+  align-items: center;
   font-size: 2rem;
 }
 
-.verificationPage header nav p span.white-line {
-  border-top: 3px solid var(--white);
+.verificationPage header nav p span {
+  position: relative;
+  width: 100%;
 }
 
-.verificationPage header nav p span.red-line {
+.verificationPage header nav p span .white-line {
+  border-top: 3px solid var(--white);
+  position: absolute;
+  width: 100%;
+  top: 3px;
+}
+
+.verificationPage header nav p span .red-line {
   border-bottom: 3px solid var(--red);
+  position: absolute;
+  width: 100%;
+  bottom: 3px;
 }
 
 /* Verification PAge Main */
