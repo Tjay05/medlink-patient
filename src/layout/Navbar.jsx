@@ -9,8 +9,13 @@ import home from './../assets/icons/home.svg';
 import appointmentIcon from './../assets/icons/app-icon.svg';
 import notifyIcon from './../assets/icons/note-nav.svg';
 import record from './../assets/icons/record.svg';
+import { useContext } from 'react';
+import { PatientContext } from '../App';
 
 const NavBar = () => {
+  const patientData1 = localStorage.getItem('patient');
+  const patient = JSON.parse(patientData1);
+
   const location = useLocation();
   let currentLink = ''
   const crumbs = location.pathname.split('/')
@@ -62,10 +67,10 @@ const NavBar = () => {
             <li><img src={chat} alt="" /></li>
             <li className='last'>
               <div className="profile">
-                <p id="adminName">Lois Poppins</p>
+                <p id="adminName">{`${patient.firstname} ${patient.lastname}`}</p>
                 <span>Patient</span>
               </div>
-              <Link className='initials' to="AdminProfile">L</Link>
+              <Link className='initials' to="AdminProfile">{patient.firstname[0]}</Link>
             </li>
           </ul>
         </nav>

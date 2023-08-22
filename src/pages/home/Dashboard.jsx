@@ -7,6 +7,9 @@ import profilePic from '../../assets/images/doc1.png';
 import Calendar from 'react-calendar';
 
 const Dashboard = () => {
+  const patientData1 = localStorage.getItem('patient');
+  const patient = JSON.parse(patientData1);
+  
   return ( 
     <div className="wrapper">
       <div className="doctor-dashboard">
@@ -14,7 +17,7 @@ const Dashboard = () => {
           <article className="welcome">
             <div className="welcomeWrap">
               <p className="text-wrapper">Welcome,</p>
-              <p className="userName">Lois Poppins</p>
+              <p className="userName">{`${patient.firstname} ${patient.lastname}`}</p>
               <div className="welcome-line"></div>
               <p className="tip">An apple a day, keeps the doctors away. Eat an apple today!!!</p>
             </div>
