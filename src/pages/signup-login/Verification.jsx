@@ -92,7 +92,7 @@ const Verification = () => {
               />
             ))}
           </div>
-          <p className="err-mssg">{data.message}</p>
+          <p className="err-mssg">{data}</p>
           <button onClick={handleClick}>Next</button>
         </form>
       </main>
