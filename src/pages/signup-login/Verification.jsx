@@ -41,7 +41,7 @@ const Verification = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({otp}),
+        body: JSON.stringify({OTP: otp}),
       });
       const data = await response.json()
       setData(data);
