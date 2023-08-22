@@ -2,13 +2,16 @@ import avatar from '../assets/icons/avatar.svg';
 import notification from '../assets/icons/notification-solid.svg';
 
 const Notifications = () => {
+  const patientData1 = localStorage.getItem('patient');
+  const patient = JSON.parse(patientData1);
+
   return ( 
     <div className="wrapper notificationWrap">
       <div className="profile-notification">
         <img src={avatar} alt="" />
         <div className="aboutInfo">
-          <p className='userName'>Lois Poppins</p>
-          <p className='userId'>87364523TP</p>
+          <p className='userName'>{`${patient.firstname} ${patient.lastname}`}</p>
+          <p className='userId'>{patient.id}</p>
         </div>
       </div>
       <div className="notification-preview">
