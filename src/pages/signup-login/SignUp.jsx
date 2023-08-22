@@ -45,7 +45,7 @@ const SignUp = () => {
       setData(data)
       console.log('error', data)
     }else{
-      setData('Could not login patient')
+      setData('Could not create account')
     }
   }
     catch (error) {

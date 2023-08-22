@@ -113,15 +113,29 @@ img {
 
 .landPage header nav p {
   color: var(--white);
+  display: flex;
+  align-items: center;
   font-size: 2rem;
 }
 
-.landPage header nav p span.white-line {
-  border-top: 3px solid var(--white);
+.landPage header nav p span {
+  position: relative;
+  /* display: inline-block; */
+  width: 100%;
 }
 
-.landPage header nav p span.red-line {
+.landPage header nav p span .white-line {
+  border-top: 3px solid var(--white);
+  position: absolute;
+  width: 100%;
+  top: 3px;
+}
+
+.landPage header nav p span .red-line {
   border-bottom: 3px solid var(--red);
+  position: absolute;
+  width: 100%;
+  bottom: 3px;
 }
 
 .landPage header nav button { 
