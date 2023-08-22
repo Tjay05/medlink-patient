@@ -6,9 +6,14 @@ const SucessSignup = ( ) => {
   const { patientData } = useContext(PatientContext);
 
   const history = useNavigate();
-  console.log(patientData);
+
   const handleClick = () => {
-    history('/Login')
+    history('/Home')
+    localStorage.setItem('patient', JSON.stringify({
+      firstname: patientData.firstname,
+      lastname: patientData.lastname,
+      email: patientData.email
+    }));       
   }
 
   return ( 
@@ -21,7 +26,7 @@ const SucessSignup = ( ) => {
       <main>
         <h1>Congratulations</h1>
         <p className="registeredSuccess">
-          You have been registered successfully. Your patient ID is <br /><span className="patientId">11223344TP</span>
+          You have been registered successfully. Your patient ID is <br /><span className="patientId">{patientData.id}</span>
         </p>
         <p className="reminder">*You are to use your patient ID to login</p>
         <button onClick={handleClick} >Done</button>

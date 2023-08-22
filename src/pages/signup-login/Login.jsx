@@ -29,18 +29,7 @@ const Login = () => {
       const data = await response.json()
       setData(data);
       if (response.ok) {
-        history('/Home'); 
-        // localStorage.setItem('patient', JSON.stringify({
-        //   firstname: data.firstname,
-        //   lastname: data.lastname,
-        //   email: data.email,
-        //   areaOfSpecialization: data.areaOfSpecialization,
-        //   med_License_number: data.med_License_number,
-        //   appointments: data.appointments,
-        //   today:data.appointmentsToday,
-        //   id: data.id,
-        //   _id:data._id
-        // }));           
+        history('/Home');
       } else if(response.status === 401) {
           setData(data)
           console.log('error for 401 ', data)
