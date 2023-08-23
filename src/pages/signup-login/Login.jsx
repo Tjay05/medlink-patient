@@ -1,6 +1,7 @@
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { HashLoader } from 'react-spinners';
 
 const Login = () => {
   const [patientId, setPatientId] = useState('');
@@ -11,10 +12,12 @@ const Login = () => {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   }
+
+  const [isLoading, setIsLoading] = useState(false);
   const history = useNavigate();
 
   const handleLogin = async () => {
-    console.log('Clciked');
+    setIsLoading(true)
     try {
       const response = await fetch('https://hospital-management-backend.onrender.com/patient/login', {
         method: 'POST',
@@ -35,19 +38,22 @@ const Login = () => {
           lastname: data.lastname,
           id: data.id,
           email: data.email
-        }));       
+        }));
+        setIsLoading(false)
       } else if(response.status === 401) {
-          setData(data)
-          console.log('error for 401 ', data)
+          setData(data);
+          setIsLoading(false)
         }else if (response.status === 404){
-          setData(data)
-          console.log('error', data)
+          setData(data);
+          setIsLoading(false)
         }else{
-          setData('Could not login patient')
+          setData('Could not login patient');
+          setIsLoading(false)
         }
     }
     catch (error) {
       console.log("Topins' Error:", error);
+      setIsLoading(false)
     }
   }
 
@@ -61,6 +67,13 @@ const Login = () => {
       <main>
         <h1>Login</h1>
         <div className="form-field">
+          {isLoading && 
+            <div className="loaded">
+              <div className="loaderBox">
+                <HashLoader color='#35693f' className='dotLoader' size={40} />
+              </div>
+            </div>
+          }
           <form>
             <label htmlFor="PatientId">Enter your Patient ID</label>
             <br />
