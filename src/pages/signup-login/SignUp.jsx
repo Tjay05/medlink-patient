@@ -1,7 +1,7 @@
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { RingLoader } from 'react-spinners';
 
 const SignUp = () => {
   const [firstName, setFirstName] = useState('');
@@ -22,19 +22,23 @@ const SignUp = () => {
 
   const history = useNavigate();
 
+  const [isLoading, setIsLoading] = useState(false)
+
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    console.log('Signup-btn clicked');
+    e.preventDefault();
+    setIsLoading(true)
 
     // Password validation
     if (password !== confirmPassword) {
       setData('Passwords do not match');
+      setIsLoading(false);
       return;
     }
 
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!passwordRegex.test(password)) {
       setData('Password must contain at least 8 characters, including uppercase, lowercase, numbers, and special characters');
+      setIsLoading(false);
       return;
     }
 
@@ -57,19 +61,22 @@ const SignUp = () => {
     const data = await response.json()
     setData(data);
     if (response.ok) {
-      history('/Verification')
+      history('/Verification');
+      setIsLoading(false);
     } else if(response.status === 401) {
-      setData(data)
-      console.log('error for 401 ', data)
+      setData(data);
+      setIsLoading(false);
     }else if (response.status === 404){
-      setData(data)
-      console.log('error', data)
+      setData(data);
+      setIsLoading(false);
     }else{
-      setData('Could not create account')
+      setData('Could not create account');
+      setIsLoading(false);
     }
   }
     catch (error) {
       console.log("Topins' Error:", error);
+      setIsLoading(false);
     }
   }
 
@@ -87,12 +94,14 @@ const SignUp = () => {
             <div className="firstForm">
               <input
                 type="text"
+                required
                 placeholder="First Name"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
               />
               <input
                 type="email"
+                required
                 placeholder="Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -113,6 +122,7 @@ const SignUp = () => {
               <div className="passVisibility">
                 <input
                   type={ showPassword ? "text" : "password"}
+                  required
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -124,12 +134,14 @@ const SignUp = () => {
             </div>
             <div className="secondForm">
               <input
+                required
                 type="text"
                 placeholder="Last Name"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
               />
               <input
+                required
                 type="number"
                 placeholder="Mobile Number"
                 value={number}
@@ -137,12 +149,14 @@ const SignUp = () => {
               />
               <input
                 type="date"
+                required
                 placeholder="Date of Birth"
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
               />
               <input 
                 type="password" 
+                required
                 placeholder="Confirm Password" 
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
@@ -150,7 +164,8 @@ const SignUp = () => {
             </div>
           </div>
           <p className="err-mssg">{data}</p>
-          <button onClick={handleSubmit} >Register</button>
+          {!isLoading && <button onClick={handleSubmit} >Register</button>}
+          {isLoading && <button style={{cursor: 'not-allowed'}} disabled><RingLoader color='#35693f' size={30} /></button> }
         </form>
       </main>
     </div> 
