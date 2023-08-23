@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { PatientContext } from "../../App";
+import { RingLoader } from "react-spinners";
 
 const Verification = () => {
   const { setPatientData } = useContext(PatientContext);
@@ -10,7 +11,8 @@ const Verification = () => {
   const [otp, setOtp] = useState("");
   const inputRefs = useRef([]);
 
-  const [data, setData] = useState('')
+  const [data, setData] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (index, value) => {
     if (value.length > 1) {
@@ -36,8 +38,7 @@ const Verification = () => {
 
   const handleClick = async (e) => {
     e.preventDefault()
-    console.log(otp);
-    console.log('otp clicked');
+    setIsLoading(true);
     
     try {
       const response = await fetch('https://hospital-management-backend.onrender.com/patient/verify', {
@@ -50,20 +51,22 @@ const Verification = () => {
       const data = await response.json()
       setPatientData(data);
       if (response.ok) {
-        history("/SuccessfulSignedUp")  
-        console.log(data);      
+        history("/SuccessfulSignedUp");
+        setIsLoading(false);
       } else if(response.status === 401) {
         setData(data)
-        console.log('error for 401', data);
+        setIsLoading(false);
       } else if (response.status === 404) {
         setData(data)
-        console.log('error for 404', data);
+        setIsLoading(false);
       } else {
-        setData('Couldnt not verify account')
+        setData('Couldnt not verify account');
+        setIsLoading(false);
       }
     }
     catch(error) {
       console.log('Tosin fd up', error);
+      setIsLoading(false);
     }
   }
 
@@ -97,7 +100,8 @@ const Verification = () => {
             ))}
           </div>
           <p className="err-mssg">{data}</p>
-          <button onClick={handleClick}>Next</button>
+          {!isLoading && <button onClick={handleClick}>Next</button>}
+          {isLoading && <button style={{cursor: 'not-allowed'}} disabled><RingLoader color="#ffffff" size={35} /></button> }
         </form>
       </main>
     </div>

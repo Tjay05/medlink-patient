@@ -466,6 +466,9 @@ form.verify button {
   border-radius: 5px;
   width: 100%;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--white);
   background: var(--next-btn-bg);
 }
