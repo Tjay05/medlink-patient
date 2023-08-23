@@ -82,6 +82,31 @@ img {
   max-width: 100%;
 }
 
+/* Loader Styles */
+.loaded {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.loaded .loaderBox {
+  background: var(--white);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  width: 70px;
+}
+
 /* Utility Styles */
 .container {
   width: 100%;
@@ -579,6 +604,7 @@ form.verify button {
 .loginPage main .form-field {
   display: flex;
   flex-direction: column;
+  position: relative;
   background-color: var(--form-bg);
   padding: 2.5rem; 
   border-radius: 30px;
