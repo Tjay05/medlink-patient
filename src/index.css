@@ -568,7 +568,7 @@ form.verify button {
 }
 
 .loginPage header {
-  margin-block: 1.5rem;
+  margin-block: 1rem;
 }
 
 .loginPage header nav {
@@ -619,7 +619,7 @@ form.verify button {
   width: 100%;
   max-width: 300px;
   max-height: 310px;
-  margin-block: 1rem 4rem;
+  margin-block: 1rem 3rem;
 }
 
 .loginPage .form-field form {
@@ -1643,12 +1643,17 @@ nav.slideNav ul.slideNav li a span {
 
   /* Login Page */
   .loginPage main h1 {
-    margin-block-end: 0rem;
     font-size: 3.2rem;
   }
 
   .loginPage main .form-field {
+    margin-block: 2rem;
     max-width: 400px;
+  }
+
+  .loginPage main button {
+    margin-block-start: 2rem;
+    margin-inline-end: 8rem;
   }
 
   /* DESKTOP NAVBAR */
