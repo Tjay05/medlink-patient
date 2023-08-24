@@ -82,6 +82,13 @@ const SignUp = () => {
 
   return ( 
     <div className="container signUpPage">
+      {isLoading && 
+        <div className="loaded">
+          <div className="loaderBox">
+            <RingLoader color='#35693f' className='dotLoader' size={40} />
+          </div>
+        </div>
+      }
       <header>
         <nav>
           <p><span><a className="white-line"></a>Me</span>dli<span> <a className="red-line"></a>nk</span></p> 
@@ -164,8 +171,7 @@ const SignUp = () => {
             </div>
           </div>
           <p className="err-mssg">{data}</p>
-          {!isLoading && <button onClick={handleSubmit} >Register</button>}
-          {isLoading && <button style={{cursor: 'not-allowed'}} disabled><RingLoader color='#35693f' size={30} /></button> }
+          <button onClick={handleSubmit} >Register</button>
         </form>
       </main>
     </div> 

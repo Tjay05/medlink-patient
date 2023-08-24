@@ -107,6 +107,10 @@ img {
   width: 70px;
 }
 
+.signUpPage .loaded {
+  border-radius: unset;
+}
+
 /* Utility Styles */
 .container {
   width: 100%;
@@ -256,6 +260,7 @@ main section.aboutUs aside img {
 .signUpPage {
   background: var(--signUp-bg);
   font-family: 'Poppins', sans-serif;
+  position: relative;
   padding-block-end: 5rem;
 }
 
