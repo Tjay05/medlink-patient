@@ -1050,7 +1050,7 @@ section.recentDoctors .docsCard article .top {
 }
 
 section.recentDoctors .docsCard article .top img {
-  width: 50%;
+  width: max(50%, 50px);
 }
 
 section.recentDoctors .docsCard article .top p.docName {
@@ -1441,7 +1441,7 @@ nav.slideNav ul.slideNav li a span {
 }
 
 .profile-notification img {
-  width: 20%;
+  width: max(20%, 65px);
 }
 
 .profile-notification .aboutInfo {
@@ -1807,7 +1807,7 @@ nav.slideNav ul.slideNav li a span {
   }
   
   section.recentDoctors .docsCard article .top img {
-    width: 75%;
+    width: max(70%, 100px);
   }
   
   section.recentDoctors .docsCard article .top p.docName {
@@ -2095,7 +2095,7 @@ nav.slideNav ul.slideNav li a span {
   }
   
   .profile-notification img {
-    width: 8%;
+    width: max(8%, 80px);
   }
   
   .profile-notification .aboutInfo p.userName {
