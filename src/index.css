@@ -1333,6 +1333,7 @@ nav.slideNav ul.slideNav li a span {
   height: 37px;
   font-size: .9rem;
   padding-inline: .5rem;
+  cursor: not-allowed;
 }
 
 .confirmApp .footerNav {
