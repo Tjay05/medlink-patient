@@ -171,7 +171,7 @@ const SignUp = () => {
             </div>
           </div>
           <p className="err-mssg">{data}</p>
-          <button disabled style={{cursor: 'not-allowed'}} onClick={handleSubmit} >Register</button>
+          <button onClick={handleSubmit} >Register</button>
         </form>
       </main>
     </div> 
