@@ -650,6 +650,18 @@ form.verify button {
   font-size: 0.9rem;
 }
 
+.loginPage main form span.exist {
+  font-family: inherit;
+  color: inherit;
+  font-size: 0.7rem;
+}
+
+.loginPage main form span.exist a {
+  color: rgb(37, 37, 243);
+  font-family: inherit;
+  text-decoration: underline;
+}
+
 .passVisibility {
   position: relative;
 } 

@@ -101,6 +101,7 @@ const Login = () => {
               </div>
               <p style={{fontStyle: 'italic'}} className="err-mssg" >{data}</p>
             </div>
+            <span className='exist'>Don&apos;t have an account, <Link to='/SignUp'>SignUp Here</Link></span>
           </form>
           <p><Link to="/ChangePassword">Forgot Password</Link></p>
         </div>
