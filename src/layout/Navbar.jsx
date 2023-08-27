@@ -57,7 +57,7 @@ const NavBar = () => {
           <ul className='leftNav'>
             <li><a><img src={logo} alt="Logo" /></a></li>
             <li className='noShow'><NavLink to='/Home'>Home</NavLink></li>
-            <li className='noShow'><NavLink to='Appointments/'>Appointments</NavLink></li>
+            <li className='noShow'><NavLink to='Appointments/'>Book Appointment</NavLink></li>
             <li className='noShow'><NavLink to='Notifications'>Notifications</NavLink></li>
             <li className='noShow'><NavLink to='MedHistory'>Medical History</NavLink></li>
           </ul>
@@ -97,7 +97,7 @@ const NavBar = () => {
                 <Link to='/Home' onClick={toggleMenu}>Home</Link></li>
               <li>
                 <img src={appointmentIcon} alt="" />
-                <Link to='Appointments/' onClick={toggleMenu}>Appointments</Link></li>
+                <Link to='Appointments/' onClick={toggleMenu}>Book Appointment</Link></li>
               <li>
                 <img src={notifyIcon} alt="" />
                 <Link to='Notifications' onClick={toggleMenu}>Notifications</Link></li>

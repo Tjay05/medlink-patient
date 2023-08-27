@@ -10,16 +10,11 @@ const AppointmentPAyment = () => {
 
   // Paystack validation
   const publicKey = 'pk_test_a3718a2b3d82f06ddb8d855774c23ce8c1ea0a84';
-  const [amount, setAmount] = useState('');
-  // const [name, setAmount] = useState('');
-  const [phone, setPhone] = useState('');
+  const amount= 3700;
 
   const payProps = {
     email: patient.email,
     amount: amount * 100,
-    metadata: {
-      phone
-    },
     publicKey,
     text: 'Confirm Payment',
     onSuccess: () =>
@@ -27,9 +22,6 @@ const AppointmentPAyment = () => {
     onClose: () => alert("Wait! Don't leave :("),
   }
 
-
-  const handleClick = () => {
-  }
 
   return ( 
     <>
@@ -49,20 +41,11 @@ const AppointmentPAyment = () => {
             <input 
               type="number" 
               value={amount}
-              onChange={(e) => setAmount(e.target.value)}
+              disabled
               id="amount"
             />
             <br />
-            <label htmlFor="Phone">Phone</label>
-            <br />
-            <input 
-              type="number" 
-              id="Phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
           </form>
-          <PaystackButton {...payProps} />
           <div className="formDivider"></div>
           <div className="totalPayment">
             <div className="subTotal">
@@ -77,7 +60,7 @@ const AppointmentPAyment = () => {
               <p>Total Payment</p>
               <p>NGN 3700</p>
             </div>
-            <button onClick={handleClick}>Confirm Payment</button>
+            <PaystackButton {...payProps} />
           </div>
         </div>
       ) : (
