@@ -10,7 +10,7 @@ const AppointmentPAyment = () => {
 
   // Paystack validation
   const publicKey = 'pk_live_12c52b7e3887c200b19a101a9273313807053282';
-  const amount= 100;
+  const amount= 150;
 
   const payProps = {
     email: patient.email,
@@ -19,7 +19,7 @@ const AppointmentPAyment = () => {
     text: 'Confirm Payment',
     onSuccess: () =>
       setIsUploading(true),
-    onClose: () => alert("Wait! Don't leave :("),
+    onClose: () => alert("You've failed to complete payment for your medical appointment"),
   }
 
 
@@ -28,7 +28,7 @@ const AppointmentPAyment = () => {
       {!isUploading ? ( 
         <div className="paymentWrap">
           <form>
-            <h3>Enter your card details to make payment</h3>
+            <h3>Confirm details to make payment</h3>
             <label htmlFor="email">Email Address</label>
             <br />
             <input 
@@ -50,15 +50,15 @@ const AppointmentPAyment = () => {
           <div className="totalPayment">
             <div className="subTotal">
               <p>Subtotal</p>
-              <p>NGN 3550</p>
+              <p>NGN 100</p>
             </div>
             <div className="platformFee">
               <p>Platform Fee</p>
-              <p>NGN 150</p>
+              <p>NGN 50</p>
             </div>
             <div className="total">
               <p>Total Payment</p>
-              <p>NGN 3700</p>
+              <p>NGN {amount}</p>
             </div>
             <PaystackButton {...payProps} />
           </div>
