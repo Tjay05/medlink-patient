@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Cards from "react-credit-cards-2";
+import { PaystackButton } from "react-paystack";
 
 const AppointmentPAyment = () => {
   const patientData1 = localStorage.getItem('patient');
@@ -8,26 +8,27 @@ const AppointmentPAyment = () => {
 
   const [isUploading, setIsUploading] = useState(false);
 
+  // Paystack validation
+  const publicKey = 'pk_test_a3718a2b3d82f06ddb8d855774c23ce8c1ea0a84';
+  const [amount, setAmount] = useState('');
+  // const [name, setAmount] = useState('');
+  const [phone, setPhone] = useState('');
+
+  const payProps = {
+    email: patient.email,
+    amount: amount * 100,
+    metadata: {
+      phone
+    },
+    publicKey,
+    text: 'Confirm Payment',
+    onSuccess: () =>
+      setIsUploading(true),
+    onClose: () => alert("Wait! Don't leave :("),
+  }
+
+
   const handleClick = () => {
-    setIsUploading(true);
-  }
-
-  const [state, setState] = useState({
-    number: '',
-    expiry: '',
-    cvc: '',
-    name: '',
-    focus: '',
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    
-    setState((prev) => ({ ...prev, [name]: value }));
-  }
-
-  const handleInputFocus = (e) => {
-    setState((prev) => ({ ...prev, focus: e.target.name }));
   }
 
   return ( 
@@ -43,46 +44,25 @@ const AppointmentPAyment = () => {
               disabled
             />
             <br />
-            <label htmlFor="cardNumber">Credit/Debit Card Number</label>
+            <label htmlFor="amount">Amount</label>
             <br />
             <input 
               type="number" 
-              id="cardNumber"
-              name="number"
-              placeholder="XXXX  XXXX  XXXX  XXXX"
-              value={state.number}
-              onChange={handleInputChange}
-              onFocus={handleInputFocus}
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+              id="amount"
             />
-            <div className="flexForm">
-              <div className="twoForms">
-                <label htmlFor="Expiry">Expiry Date</label>
-                <br />
-                <input
-                  type="number"
-                  id="Expiry"
-                  name="expiry"
-                  placeholder="Valid Thru"
-                  value={state.expiry}
-                  onChange={handleInputChange}
-                  onFocus={handleInputFocus}
-                />
-              </div>
-              <div className="twoForms">
-                <label htmlFor="CVV">CVV</label>
-                <br />
-                <input
-                  id="CVV"
-                  type="number"
-                  name="cvc"
-                  placeholder="CVC"
-                  value={state.cvc}
-                  onChange={handleInputChange}
-                  onFocus={handleInputFocus}
-                />
-              </div>
-            </div>
+            <br />
+            <label htmlFor="Phone">Phone</label>
+            <br />
+            <input 
+              type="number" 
+              id="Phone"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
           </form>
+          <PaystackButton {...payProps} />
           <div className="formDivider"></div>
           <div className="totalPayment">
             <div className="subTotal">
