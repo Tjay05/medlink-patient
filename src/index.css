@@ -1496,6 +1496,171 @@ nav.slideNav ul.slideNav li a span {
   color: hsla(221, 5%, 65%, 1);
 }
 
+/* Profile Page */
+.ProfPageWrap {
+  position: relative;
+}
+
+.profileWrap {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  width: 100%;
+  position: relative;
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileWrap .profilePic .ndPic input[type="file"] {
+  display: none;
+}
+
+.profileWrap .profilePic {
+  position: absolute;
+  top: 180px;
+  translate: 0% -50%;
+}
+
+.profileWrap .profilePic img.PiC {
+  border-radius: 10px;
+  width: 110px;
+  height: 110px;
+}
+
+.av__upload {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  border-radius: 5px;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  z-index: 1;
+}
+
+/* Pop-up Menu */
+.av__upload .sideNav {
+  text-align: center;
+  background-color: var(--white);
+  border-radius: 5px;
+  width: min(16rem, 250px);
+  position: relative;
+  margin-inline: auto;
+  padding-inline: 7%;
+  padding-block: 2%;
+}
+
+.sideNav .closeIcon {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.closeIcon__icon {
+  width: 20px;
+  height: 25px;
+}
+
+.sideNav .sideNavProf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.av__upload .sideNav img {
+  margin-block-start: 2rem;
+  width: 85%;
+  height: 200px;
+}
+
+.av__upload .sideNav button {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background-color: var(--signUp-bg);
+}
+
+.ndPic {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  width: 20%
+}
+
+.ndPic .cam {
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+
+.profileWrap .profileHead {
+  height: 32%;
+  background-color: var(--login-bg);
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  text-align: center;
+}
+
+.profileHead h2 {
+  color: var(--white);
+  font-size: 1.4rem;
+  padding-block-start: 2rem;
+}
+
+.profileWrap .profDetails {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-block-start: 3.5rem;
+  height: 60%;
+  width: 100%;
+}
+
+.profileWrap .profDetails p {
+  align-self: flex-start;
+  width: 100%;
+  padding-inline-start: 1rem;
+  background-color: hsla(0, 0%, 88%, 1);
+  margin-block-start: 1rem;
+  padding-block: .3rem;
+  color: var(--next-btn-bg);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.profileWrap .profDetails p span#light {
+  color: var(--login-bg);
+  font-size: .9rem;
+}
+
+.profileWrap .profDetails button {
+  align-self: flex-end;
+  border: none;
+  color: white;
+  font-size: .9rem;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  background-color: var(--login-bg);
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  margin-block-start: 2rem;
+}
+
+.profileWrap .profDetails button img {
+  width: 20%;
+}
+
 /* Desktop Styles */
 @media(min-width: 768px) {
   /* Utility Style */
@@ -2133,5 +2298,39 @@ nav.slideNav ul.slideNav li a span {
   
   .notificationWrap .notification-preview p {  
     font-size: 1rem;
+  }
+
+  /* PROFILE-PAGE */
+  .ProfPageWrap .profileWrap .profilePic img.PiC {
+    width: 160px;
+    height: 160px;
+  }
+
+  .ProfPageWrap .av__upload .sideNav {
+    width: max(28rem, 400px);
+  }
+
+  .ProfPageWrap .profileHead h2 {
+    font-size: 2rem;
+  }
+
+  .ProfPageWrap .profileWrap .profDetails {
+    margin-block-start: 5rem;
+  }
+
+  .ProfPageWrap .profileWrap .profDetails p {
+    font-size: 1rem;
+  }
+
+  .ProfPageWrap .profileWrap .profDetails p span#light {
+    font-size: 1.1rem;
+  }
+
+  .ProfPageWrap .profileWrap .profDetails button {
+    font-size: 1.1rem;
+  }
+
+  .ProfPageWrap .profileWrap .profDetails button img {
+    width: 30%;
   }
 }

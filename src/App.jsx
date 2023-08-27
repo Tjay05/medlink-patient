@@ -40,6 +40,7 @@ import AppointmentPAyment from "./pages/appointment/AppPayment";
 import Notifications from "./pages/Notification";
 import { useState } from "react";
 import { createContext } from "react";
+import ProfilePage from "./pages/ProfilePage";
 
 export const PatientContext = createContext()
 
@@ -68,6 +69,7 @@ const router = createBrowserRouter(
           <Route path="AppointmentPayment" element={<AppointmentPAyment/>}/>
         </Route>
         <Route path="Notifications" element={<Notifications/>}/>
+        <Route path="Profile" element={<ProfilePage/>} />
       </Route>
     </Route>
   )

@@ -70,7 +70,7 @@ const NavBar = () => {
                 <p id="adminName">{`${patient.firstname} ${patient.lastname}`}</p>
                 <span>Patient</span>
               </div>
-              <Link className='initials' to="AdminProfile">{patient.firstname[0]}</Link>
+              <Link className='initials' to="Profile">{patient.firstname[0]}</Link>
             </li>
           </ul>
         </nav>
