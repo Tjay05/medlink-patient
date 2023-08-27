@@ -9,8 +9,8 @@ const AppointmentPAyment = () => {
   const [isUploading, setIsUploading] = useState(false);
 
   // Paystack validation
-  const publicKey = 'pk_test_a3718a2b3d82f06ddb8d855774c23ce8c1ea0a84';
-  const amount= 3700;
+  const publicKey = 'pk_live_12c52b7e3887c200b19a101a9273313807053282';
+  const amount= 100;
 
   const payProps = {
     email: patient.email,
