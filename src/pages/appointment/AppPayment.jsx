@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import Cards from "react-credit-cards-2";
 
 const AppointmentPAyment = () => {
+  const patientData1 = localStorage.getItem('patient');
+  const patient = JSON.parse(patientData1);
+
   const [isUploading, setIsUploading] = useState(false);
 
   const handleClick = () => {
@@ -36,18 +39,10 @@ const AppointmentPAyment = () => {
             <label htmlFor="email">Email Address</label>
             <br />
             <input 
-              id="email"
-              type="email"
-              placeholder="example@yahoo.com"
+              value={patient.email}
+              disabled
             />
             <br />
-            <Cards
-              number={state.number}
-              expiry={state.expiry}
-              cvc={state.cvc}
-              name={state.name}
-              focused={state.focus}
-            />
             <label htmlFor="cardNumber">Credit/Debit Card Number</label>
             <br />
             <input 
