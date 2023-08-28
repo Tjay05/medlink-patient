@@ -18,74 +18,51 @@ const ProfilePage = () => {
   const patient = JSON.parse(patientData);
   const handleFileChange = (event) => setAvatar(event.target.files[0]); 
 
-  // useEffect( () => {
-  //   setIsLoading(true);
-  //   fetch(`https://hospital-management-backend.onrender.com/patient/${patient.id}/get-image`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setPic(data);
-  //       setIsLoading(false);
-  //       console.log(pic);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //       setIsLoading(false)
-  //     });
-  // }, []);
+  useEffect( () => {
+    setIsLoading(true);
+    fetch(`https://hospital-management-backend.onrender.com/patient/${patient._id}/get-image`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPic(data);
+        setIsLoading(false);
+        console.log(pic);
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoading(false)
+      });
+  }, []);
 
   const handleExit = () => setIsClosed(true);  
 
   const handleUpload = async() => {
       setIsUploading(true);
       try {
-          console.log(avatar);
-          const formData = new FormData();
-          formData.append('image', avatar )
-          const response = await fetch(`https://hospital-management-backend.onrender.com/patient/${patient.id}/upload-picture`, {
-              method: 'POST',
-              body: formData,
-          })
-          const data = await response.json();
-          if(response.ok){
-              console.log(data);
-              setIsUploading(false);
-              setIsClosed(true);
-              setPic(URL.createObjectURL(avatar));
-          }else{
-              console.log('Image upload failed',data);
-              setIsUploading(false);
-          }
-      } catch(err){
-          console.log('Error uploading image:', err);
+        const formData = new FormData();
+        formData.append('image', avatar )
+        const response = await fetch(`https://hospital-management-backend.onrender.com/patient/${patient._id}/upload-picture`, {
+          method: 'POST',
+          body: formData, 
+        })
+        const data = await response.json();
+        if(response.ok){
           setIsUploading(false);
+          setIsClosed(true);
+          setPic(URL.createObjectURL(avatar));
+        }else{
+          console.log('Image upload failed',data);
+          setIsUploading(false);
+        }
+      } catch(err){
+        console.log('Error uploading image:', err);
+        setIsUploading(false);
       }
   }
   
-// const handleClick = async(doctor_id) => {
-
-//     setIsPending(true);
-//     try {
-//         const response = await fetch(url, {
-//             method: 'PATCH',
-//             headers: {
-//                 'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify({
-//             Status:'Offline'
-//             })
-//         })  
-//         const data = await response.json();
-//         if(response.ok){
-//             setIsPending(false)
-//             localStorage.removeItem('patient');
-//             history('/');
-//         } else {
-//             setIsPending(false)
-//         }
-//     } catch(err) {
-//         console.log(err);
-//     } 
-// }
+const handleClick = () => {
+  localStorage.removeItem('patient');
+  history('/')
+}
 
   return ( 
     <div className="wrapper ProfPageWrap">
@@ -124,8 +101,8 @@ const ProfilePage = () => {
           <p><span id="light">Gender:</span> {patient.gender} </p>
           <p><span id="light">Date of Birth:</span> {patient.dob} </p>
           <p><span id="light">NHIS:</span> {!patient.nhis ? 'null' : patient.nhis} </p>
-          {/* {!isPending && <button onClick={() =>handleClick(patient._id)} > <img src={logoutbtn} alt="" />Logout</button>}
-          {isPending && <button disabled>Logging Out...</button>} */}
+          {!isPending && <button onClick={handleClick} > <img src={logoutbtn} alt="" />Logout</button>}
+          {isPending && <button disabled>Logging Out...</button>}
         </div>
       </div>
     </div> 
