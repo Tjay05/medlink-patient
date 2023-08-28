@@ -901,6 +901,14 @@ aside nav.secondNav.open ul li:nth-child(4) {
   transition-delay: 0.5s;
 } 
 
+aside nav.secondNav ul li:nth-child(5) {
+  transition-delay: .5s;
+}
+
+aside nav.secondNav.open ul li:nth-child(5) {
+  transition-delay: 0.6s;
+} 
+
 aside nav.secondNav ul li img {
   width: 12%; 
 }
