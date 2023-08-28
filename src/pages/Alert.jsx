@@ -38,7 +38,7 @@ const AlertCom = () => {
       <div style={{textAlign: 'center', marginBlock: '2rem'}} className="loader"> <ClipLoader color="#35693f" className="loadImg" loading={isLoading} size={60} /></div>}
       
       {alert && alert.map((alert) => (
-          <div className="notification-preview" key={alert.id}>
+          <div className="notification-preview" key={alert}>
               {/* <img src={notification} alt="" /> */}
               <TbAlertCircle size={50}/>
               <p className="notification-message">{alert} </p>
