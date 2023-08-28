@@ -12,7 +12,9 @@ const SucessSignup = ( ) => {
     localStorage.setItem('patient', JSON.stringify({
       firstname: patientData.firstname,
       lastname: patientData.lastname,
-      email: patientData.email
+      email: patientData.email,
+      _id: patientData._id,
+      nhis: patientData.NHIS
     }));       
   }
 

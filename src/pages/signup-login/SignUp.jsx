@@ -8,6 +8,7 @@ const SignUp = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [number, setNumber] = useState('');
+  const [NHIS, setNhis] = useState('');
   const [gender, setGender] = useState('');
   const [dob, setDob] = useState('');
   const [password, setPassword] = useState('');
@@ -55,7 +56,8 @@ const SignUp = () => {
           number,
           Gender: gender,
           DOB: dob,
-          password
+          password,
+          NHIS
       }),
       });
     const data = await response.json()
@@ -113,10 +115,12 @@ const SignUp = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              {/* <input
+              <input
                 type="text"
                 placeholder="NHIS"
-              /> */}
+                value={NHIS}
+                onChange={(e) => setNhis(e.target.value)}
+              />
               <select
                 value={gender} 
                 id="gender"
@@ -126,18 +130,6 @@ const SignUp = () => {
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
-              <div className="passVisibility">
-                <input
-                  type={ showPassword ? "text" : "password"}
-                  required
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <div className='showPword' onClick={togglePasswordVisibility} >
-                  {showPassword ? <FaEyeSlash /> : <FaEye />}
-                </div>
-              </div>
             </div>
             <div className="secondForm">
               <input
@@ -161,6 +153,18 @@ const SignUp = () => {
                 value={dob}
                 onChange={(e) => setDob(e.target.value)}
               />
+              <div className="passVisibility">
+                <input
+                  type={ showPassword ? "text" : "password"}
+                  required
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <div className='showPword' onClick={togglePasswordVisibility} >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </div>
+              </div>
               <input 
                 type="password" 
                 required

@@ -37,7 +37,9 @@ const Login = () => {
           firstname: data.firstname,
           lastname: data.lastname,
           id: data.id,
-          email: data.email
+          email: data.email,
+          _id:data._id,
+          nhis: data.NHIS
         }));
         setIsLoading(false)
       } else if(response.status === 401) {

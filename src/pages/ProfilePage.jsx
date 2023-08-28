@@ -20,7 +20,7 @@ const ProfilePage = () => {
 
   useEffect( () => {
     setIsLoading(true);
-    fetch(`https://hospital-management-backend.onrender.com/doctor/${patient.id}/get-image`)
+    fetch(`https://hospital-management-backend.onrender.com/patient/${patient.id}/get-image`)
       .then((res) => res.json())
       .then((data) => {
         setPic(data);
@@ -41,7 +41,7 @@ const ProfilePage = () => {
           console.log(avatar);
           const formData = new FormData();
           formData.append('image', avatar )
-          const response = await fetch(`https://hospital-management-backend.onrender.com/doctor/upload-picture`, {
+          const response = await fetch(`https://hospital-management-backend.onrender.com/patient/${patient.id}/upload-picture`, {
               method: 'POST',
               body: formData,
           })
@@ -61,31 +61,31 @@ const ProfilePage = () => {
       }
   }
   
-  const handleClick = async(doctor_id) => {
+// const handleClick = async(doctor_id) => {
 
-    setIsPending(true);
-    try {
-        const response = await fetch(url, {
-            method: 'PATCH',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-            Status:'Offline'
-            })
-        })  
-        const data = await response.json();
-        if(response.ok){
-            setIsPending(false)
-            localStorage.removeItem('patient');
-            history('/');
-        } else {
-            setIsPending(false)
-        }
-    } catch(err) {
-        console.log(err);
-    } 
-}
+//     setIsPending(true);
+//     try {
+//         const response = await fetch(url, {
+//             method: 'PATCH',
+//             headers: {
+//                 'Content-Type': 'application/json',
+//             },
+//             body: JSON.stringify({
+//             Status:'Offline'
+//             })
+//         })  
+//         const data = await response.json();
+//         if(response.ok){
+//             setIsPending(false)
+//             localStorage.removeItem('patient');
+//             history('/');
+//         } else {
+//             setIsPending(false)
+//         }
+//     } catch(err) {
+//         console.log(err);
+//     } 
+// }
 
   return ( 
     <div className="wrapper ProfPageWrap">
