@@ -25,7 +25,6 @@ const ProfilePage = () => {
       .then((data) => {
         setPic(data);
         setIsLoading(false);
-        console.log(pic);
       })
       .catch((error) => {
         console.log(error);
@@ -80,7 +79,7 @@ const handleClick = () => {
           </div>
         )}
         <div className="profilePic">
-          <img className="PiC" src={pic === null ? avatar1 : pic } alt='Profile picture' />
+          <img className="PiC" src={pic === null ? avatar1 : pic } alt='Profile pic' />
           <div className="ndPic">
             <input
               onChange={handleFileChange}  
