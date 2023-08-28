@@ -36,9 +36,11 @@ const Login = () => {
         localStorage.setItem('patient', JSON.stringify({
           firstname: data.firstname,
           lastname: data.lastname,
-          id: data.id,
           email: data.email,
-          _id:data._id,
+          id: data.id,
+          _id: data._id,
+          dob: data.DOB,
+          gender: data.Gender,
           nhis: data.NHIS
         }));
         setIsLoading(false)

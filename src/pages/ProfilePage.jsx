@@ -121,6 +121,8 @@ const ProfilePage = () => {
           <p><span id="light">Profile Name: </span> {`${patient.firstname} ${patient.lastname}`}</p>
           <p><span id="light">ID:</span> {patient.id}</p>
           <p><span id="light">Email:</span> {patient.email} </p>
+          <p><span id="light">Gender:</span> {patient.gender} </p>
+          <p><span id="light">Date of Birth:</span> {patient.dob} </p>
           <p><span id="light">NHIS:</span> {!patient.nhis ? 'null' : patient.nhis} </p>
           {/* {!isPending && <button onClick={() =>handleClick(patient._id)} > <img src={logoutbtn} alt="" />Logout</button>}
           {isPending && <button disabled>Logging Out...</button>} */}
