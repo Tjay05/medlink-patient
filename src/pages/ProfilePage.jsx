@@ -19,19 +19,19 @@ const ProfilePage = () => {
   const handleFileChange = (event) => setAvatar(event.target.files[0]); 
 
   useEffect( () => {
-      setIsLoading(true);
-      fetch(`https://hospital-management-backend.onrender.com/doctor/${patient.id}/get-image`)
-        .then((res) => res.json())
-        .then((data) => {
-          setPic(data);
-          setIsLoading(false);
-          console.log(pic);
-        })
-        .catch((error) => {
-          console.log(error);
-          setIsLoading(false)
-        });
-    }, []);
+    setIsLoading(true);
+    fetch(`https://hospital-management-backend.onrender.com/doctor/${patient.id}/get-image`)
+      .then((res) => res.json())
+      .then((data) => {
+        setPic(data);
+        setIsLoading(false);
+        console.log(pic);
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoading(false)
+      });
+  }, []);
 
   const handleExit = () => setIsClosed(true);  
 

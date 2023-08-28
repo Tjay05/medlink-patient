@@ -10,7 +10,9 @@ const AppointmentPAyment = () => {
 
   // Paystack validation
   const publicKey = 'pk_live_12c52b7e3887c200b19a101a9273313807053282';
-  const amount= 150;
+  const consultationFee = 50;
+  const platformFee = 50;
+  const amount= consultationFee + platformFee;
 
   const payProps = {
     email: patient.email,
@@ -49,12 +51,12 @@ const AppointmentPAyment = () => {
           <div className="formDivider"></div>
           <div className="totalPayment">
             <div className="subTotal">
-              <p>Subtotal</p>
-              <p>NGN 100</p>
+              <p>Consultation Fee</p>
+              <p>NGN {consultationFee}</p>
             </div>
             <div className="platformFee">
               <p>Platform Fee</p>
-              <p>NGN 50</p>
+              <p>NGN {platformFee}</p>
             </div>
             <div className="total">
               <p>Total Payment</p>
