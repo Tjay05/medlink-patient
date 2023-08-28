@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { NavLink, Link, Outlet, useLocation } from 'react-router-dom';
+import { TbAlertCircle } from 'react-icons/tb';
 
 import logo from './../assets/icons/logo2.svg';
 import blocks from './../assets/icons/blocks.svg';
@@ -59,6 +60,7 @@ const NavBar = () => {
             <li className='noShow'><NavLink to='/Home'>Home</NavLink></li>
             <li className='noShow'><NavLink to='Appointments/'>Book Appointment</NavLink></li>
             <li className='noShow'><NavLink to='Notifications'>Notifications</NavLink></li>
+            <li className='noShow'><NavLink to='Alerts'>Alerts</NavLink></li>
             <li className='noShow'><NavLink to='MedHistory'>Medical History</NavLink></li>
           </ul>
           <ul className='rightNav'>
@@ -94,16 +96,24 @@ const NavBar = () => {
             <ul>
               <li>
                 <img src={home} alt="" />
-                <Link to='/Home' onClick={toggleMenu}>Home</Link></li>
+                <Link to='/Home' onClick={toggleMenu}>Home</Link>
+              </li>
               <li>
                 <img src={appointmentIcon} alt="" />
-                <Link to='Appointments/' onClick={toggleMenu}>Book Appointment</Link></li>
+                <Link to='Appointments/' onClick={toggleMenu}>Book Appointment</Link>
+              </li>
               <li>
                 <img src={notifyIcon} alt="" />
-                <Link to='Notifications' onClick={toggleMenu}>Notifications</Link></li>
+                <Link to='Notifications' onClick={toggleMenu}>Notifications</Link>
+              </li>
+              <li>
+                <TbAlertCircle size={21}/>
+                <Link to='Alerts' onClick={toggleMenu}>Alerts</Link>
+              </li>
               <li>
                 <img src={record} alt="" />
-                <Link to='MedHistory' onClick={toggleMenu}>Medical History</Link></li>
+                <Link to='MedHistory' onClick={toggleMenu}>Medical History</Link>
+              </li>
             </ul>
           </nav>
         </aside>
