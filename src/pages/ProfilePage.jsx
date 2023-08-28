@@ -18,20 +18,20 @@ const ProfilePage = () => {
   const patient = JSON.parse(patientData);
   const handleFileChange = (event) => setAvatar(event.target.files[0]); 
 
-  useEffect( () => {
-    setIsLoading(true);
-    fetch(`https://hospital-management-backend.onrender.com/patient/${patient.id}/get-image`)
-      .then((res) => res.json())
-      .then((data) => {
-        setPic(data);
-        setIsLoading(false);
-        console.log(pic);
-      })
-      .catch((error) => {
-        console.log(error);
-        setIsLoading(false)
-      });
-  }, []);
+  // useEffect( () => {
+  //   setIsLoading(true);
+  //   fetch(`https://hospital-management-backend.onrender.com/patient/${patient.id}/get-image`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setPic(data);
+  //       setIsLoading(false);
+  //       console.log(pic);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       setIsLoading(false)
+  //     });
+  // }, []);
 
   const handleExit = () => setIsClosed(true);  
 
@@ -121,8 +121,9 @@ const ProfilePage = () => {
           <p><span id="light">Profile Name: </span> {`${patient.firstname} ${patient.lastname}`}</p>
           <p><span id="light">ID:</span> {patient.id}</p>
           <p><span id="light">Email:</span> {patient.email} </p>
-          {!isPending && <button onClick={() =>handleClick(patient._id)} > <img src={logoutbtn} alt="" />Logout</button>}
-          {isPending && <button disabled>Logging Out...</button>}
+          <p><span id="light">NHIS:</span> {patient.nhis} </p>
+          {/* {!isPending && <button onClick={() =>handleClick(patient._id)} > <img src={logoutbtn} alt="" />Logout</button>}
+          {isPending && <button disabled>Logging Out...</button>} */}
         </div>
       </div>
     </div> 

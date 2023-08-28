@@ -14,6 +14,7 @@ const SucessSignup = ( ) => {
       lastname: patientData.lastname,
       email: patientData.email,
       _id: patientData._id,
+      id: patientData.id,
       nhis: patientData.NHIS
     }));       
   }
