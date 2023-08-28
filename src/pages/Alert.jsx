@@ -1,5 +1,7 @@
+import avatar from '../assets/icons/avatar.svg';
 import { useEffect, useState } from "react";
 import { ClipLoader } from "react-spinners";
+import { TbAlertCircle } from 'react-icons/tb';
 
 const AlertCom = () => {
   const patientData1 = localStorage.getItem('patient');
@@ -24,15 +26,21 @@ const AlertCom = () => {
 
   return ( 
     <div className="wrapper notificationWrap">
-      <div className="doc-details">
-        <h1 id="docName">{`${patient.firstname} ${patient.lastname}`}</h1>
+      <div className="profile-notification">
+        <img src={avatar} alt="" />
+        <div className="aboutInfo">
+          <p className='userName'>{`${patient.firstname} ${patient.lastname}`}</p>
+          <p className='userId'>{patient.id}</p>
+        </div>
       </div>
 
-      {/* <div className="loaded">{isLoading && <ClipLoader color="#35693f" className="loadImg" loading={isLoading} size={60} />}</div> */}
+      {isLoading &&
+      <div style={{textAlign: 'center', marginBlock: '2rem'}} className="loader"> <ClipLoader color="#35693f" className="loadImg" loading={isLoading} size={60} /></div>}
       
       {alert && alert.map((alert) => (
-          <div className="notification-preview" key={alert._id}>
-              <img src={notification} alt="" />
+          <div className="notification-preview" key={alert.id}>
+              {/* <img src={notification} alt="" /> */}
+              <TbAlertCircle size={50}/>
               <p className="notification-message">{alert} </p>
           </div>
           
