@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { createContext } from "react";
 import { 
   createBrowserRouter,
   Route,
@@ -38,8 +40,6 @@ import ChooseAppDate from "./pages/appointment/ChooseDate";
 import ConfirmApp from "./pages/appointment/ConfirmAppointment";
 import AppointmentPAyment from "./pages/appointment/AppPayment";
 import Notifications from "./pages/Notification";
-import { useState } from "react";
-import { createContext } from "react";
 import ProfilePage from "./pages/ProfilePage";
 import AlertCom from "./pages/Alert";
 
