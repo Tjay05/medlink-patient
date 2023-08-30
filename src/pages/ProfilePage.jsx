@@ -16,6 +16,7 @@ const ProfilePage = () => {
   
   const patientData = localStorage.getItem('patient')
   const patient = JSON.parse(patientData);
+  
   const handleFileChange = (event) => setAvatar(event.target.files[0]); 
 
   useEffect( () => {
