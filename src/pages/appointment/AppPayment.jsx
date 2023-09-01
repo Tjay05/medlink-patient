@@ -10,7 +10,7 @@ const AppointmentPAyment = () => {
 
   // Paystack validation
   const publicKey = 'pk_live_12c52b7e3887c200b19a101a9273313807053282';
-  const consultationFee = 50;
+  const consultationFee = 450;
   const platformFee = 50;
   const amount= consultationFee + platformFee;
 
