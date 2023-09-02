@@ -35,7 +35,7 @@ const Dashboard = () => {
             <div className="appToday">
               <img src={docIcon} alt="" />
               <div className="appoint-details">
-                <p className='num'>30</p>
+                <p className='num'>0</p>
                 <p className='appt'>Available Doctors</p>
                 <p className='today'>Today</p>
               </div>
@@ -59,8 +59,8 @@ const Dashboard = () => {
             <article>
               <div className="top">
                 <img src={profilePic} alt="Profile" />
-                <p className='docName'>Dr. Jacob Jones</p>
-                <p className='role'>General Doctor</p>
+                <p className='docName'>Dr. Jane Obi</p>
+                <p className='role'>Gynaecologist</p>
               </div>
               <div className="bottom">
                 <img src={clockIcon} alt="Profile" /> 
