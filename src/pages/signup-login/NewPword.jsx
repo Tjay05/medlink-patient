@@ -1,6 +1,6 @@
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+// import { Link, useNavigate } from "react-router-dom";
 
 const NewPword = () => {
   const [showPassword, setShowPassword] = useState(false);
